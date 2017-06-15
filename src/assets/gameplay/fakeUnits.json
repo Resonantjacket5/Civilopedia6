@@ -1,0 +1,12 @@
+{
+  "units":{
+    "warrior":{
+      "name":"Scout",
+      "description":"Fast-moving Ancient era recon unit."
+    },
+    "archer":{
+      "name":"Archer",
+      "description":"Effective ranged unit, using a bow to slay its enemies"
+    }
+  }
+}

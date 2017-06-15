@@ -1,0 +1,29 @@
+{
+  "pottery":{
+    "name":"Pottery",
+    "eureka":"None",
+    "description":"Allows harvesting of wheat and rice",
+    "unlocks":
+    {
+     "buildings":["granary"]
+    }
+  },
+  "animal_husbandry":{
+    "name":"Animal Husbandry",
+    "eureka":"None",
+    "description":"Allows harvesting of cattle and sheep"
+  },
+  "mining":{
+    "name":"Mining",
+    "eureka":"NOne"
+  },
+  "irrigation":{
+    "name":"Irrigation",
+    "cost":50,
+    "eureka":"Farm a resource",
+    "unlocks":{
+      "wonders":["hanging_gardens"],
+      "improvements":["plantation","stepwell"]
+    }
+  }
+}
