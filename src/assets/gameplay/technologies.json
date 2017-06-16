@@ -1,6 +1,8 @@
 {
   "pottery":{
     "name":"Pottery",
+    "id":"pottery",
+    "cost":25,
     "eureka":"None",
     "description":"Allows harvesting of wheat and rice",
     "unlocks":
@@ -10,20 +12,102 @@
   },
   "animal_husbandry":{
     "name":"Animal Husbandry",
+    "id":"animal_husbandry",
+    "cost":25,
     "eureka":"None",
-    "description":"Allows harvesting of cattle and sheep"
+    "description":"Allows harvesting of cattle and sheep",
+    "unlocks":
+    {
+      "improvements":["pasture","camp"],
+      "units":["kurgan"]
+    }
   },
   "mining":{
     "name":"Mining",
-    "eureka":"NOne"
+    "id":"mining",
+    "cost":25,
+    "eureka":"None",
+    "unlocks":
+    {
+      "improvements":["mine","quarry"]
+    }
+  },
+  "sailing":{
+    "name":"Sailing",
+    "id":"sailing",
+    "cost":50,
+    "eureka":"Found a city on the Coast",
+    "description":"Allows builders to embark",
+    "unlocks":{
+      "improvements":["fishing_boats"],
+      "units":["galley","viking_longship"]
+    }
   },
   "irrigation":{
     "name":"Irrigation",
+    "id":"irrigation",
     "cost":50,
     "eureka":"Farm a resource",
     "unlocks":{
       "wonders":["hanging_gardens"],
       "improvements":["plantation","stepwell"]
+    },
+    "prerequisites":[
+      "pottery"
+    ]
+  },
+  "writing":{
+    "name":"Writing",
+    "id":"writing",
+    "cost":50,
+    "eureka":"Meet another Civilization",
+    "unlocks":{
+      "districts":["campus"],
+      "buildings":["library"]
+    },
+    "prerequisites":[
+      "pottery"
+    ]
+  },
+  "archery":{
+    "name":"Archery",
+    "id":"archery",
+    "cost":50,
+    "eureka":"Kill a unit with a Slinger",
+    "unlocks":{
+      "units":["archer"]
+    },
+    "prerequisites":[
+      "animal_husbandry"
+    ]
+  },
+  "masonry":{
+    "name":"Masonry",
+    "id":"masonry",
+    "cost":80,
+    "eureka":"Build a quarry",
+    "description":"Allows harvesting of stone and marble",
+    "unlocks":{
+      "units":["battering_ram"],
+      "buildings":["ancient_walls"],
+      "wonders":["pyramids"],
+      "improvements":["great_wall"]
     }
+  },
+  "bronze_working":{
+    "name":"Bronze Working",
+    "id":"bronze_working",
+    "cost":80,
+    "eureka":"Kill 3 Barbarians",
+    "description":"Allows chopping of rainforest and reveals iron",
+    "unlocks":{
+      "units":["spearman","hoplite"],
+      "buildings":["barracks"],
+      "districts":["encampment"]
+    },
+    "prerequisites":[
+      "mining"
+    ]
   }
+
 }

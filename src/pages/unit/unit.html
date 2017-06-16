@@ -14,5 +14,12 @@
 
 
 <ion-content padding>
-
+  <ion-item *ngIf="unit">
+    <h2>
+      {{unit.name}}
+    </h2>
+    <p>
+      {{unit.description}}
+    </p>
+  </ion-item>
 </ion-content>

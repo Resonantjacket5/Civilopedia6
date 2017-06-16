@@ -1,0 +1,74 @@
+{
+  "districts":{
+    "city_center":{
+      "buildings":[
+
+      ]
+    },
+    "campus":{
+      "buildings":[
+        "library","university","madrasa","research_lab"
+      ],
+      "type":"science",
+      "adj_yield":{
+        "mountain":1,
+        "rainforest":0.5,
+        "district":0.5
+      }
+    },
+    "holy_site":{
+      "buildings":[
+        "shrine","temple","stave_church","other_worship"
+      ]
+    },
+    "theatre_square":{
+      "type":"culture",
+      "adj_yield":{
+        "wonder":1,
+        "district":0.5
+      }
+    },
+    "harbor":{
+      "type":"gold",
+      "adj_yield":{
+        "coastal":1,
+        "district":0.5,
+        "city_center":2
+      }
+    },
+    "commercial":{
+      "type":"gold",
+      "adj_yield":{
+        "one river":2,
+        "harbor":2,
+        "district":0.5
+      }
+    }
+  },
+  "buildings":{
+    "granary":{
+      "district":"city_center",
+      "yields":[
+        "+1 food",
+        "+2 housing"
+      ]
+    },
+    "monument":{
+      "district":"city_center"
+    },
+    "water_mill":{
+      "district":"city_center"
+    },
+    "ancient_walls":{
+      "district":"city_center"
+    },
+    "medieval_walls":{
+      "district":"city_center"
+    }
+    "other city center",
+    "library":{
+      "district":"campus"
+    }
+  }
+
+}

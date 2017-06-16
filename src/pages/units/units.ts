@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GameDataProvider } from '../../providers/game-data/game-data';
+import { UnitPage } from '../unit/unit';
 /**
  * Generated class for the UnitsPage page.
  *
@@ -26,12 +27,18 @@ export class UnitsPage {
     this.gameData.getJSON('fakeUnits.json').subscribe( (data) =>{
       //this.units = Object.values(data.units);
       this.units = Object.keys(data.units).map(key=>data.units[key]);
+
     });
     //console.log(this.gameData.getJSON('fakeUnits.json'));
+    //this.gameData.getUnits().subscribe( data => {console.log(data)});
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad UnitsPage');
   }
 
+  openPage(id:string):void
+  {
+    this.navCtrl.push(UnitPage,{"unitId":id});
+  }
 }

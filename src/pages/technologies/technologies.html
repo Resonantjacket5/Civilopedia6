@@ -15,5 +15,24 @@
 </ion-header>
 
 <ion-content padding>
-
+  <ion-card *ngFor="let tech of technologies" (click)="openPage(tech.id)">
+    <ion-item>
+      <h2>
+        {{tech.name}}
+      </h2>
+      <p>
+        {{tech.description}}
+      </p>
+    </ion-item>
+  </ion-card>
+  <ion-list>
+    <ion-item *ngFor="let tech of technologies">
+      <h2>
+        {{tech.name}}
+      </h2>
+      <p>
+        {{tech.description}}
+      </p>
+    </ion-item>
+  </ion-list>
 </ion-content>

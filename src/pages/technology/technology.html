@@ -14,5 +14,30 @@
 
 
 <ion-content padding>
+  <ion-list *ngIf="technology" text-wrap>
+    <ion-card>
+      <ion-card-header>
+        {{technology.name}}
+      </ion-card-header>
+      <ion-card-content>
+        {{technology.description}}
+        <p>
+          Cost: {{technology.cost}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="technology.eureka">
+      <ion-card-header>Eureka Bonus</ion-card-header>
+      <ion-card-content>{{technology.eureka}}</ion-card-content>
+    </ion-card>
+    <div *ngIf="technology.unlocks">
+      <ion-item *ngFor="let i of technology.unlocks.improvements">
+        {{i}}
+      </ion-item>
+      <ion-card *ngFor="let unit of technology.unlocks.units">
+        {{unit}} <a href="/#/units/{{unit}}">goto</a>
 
+      </ion-card>
+    </div>
+  </ion-list>
 </ion-content>
