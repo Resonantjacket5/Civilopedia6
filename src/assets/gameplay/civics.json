@@ -1,0 +1,439 @@
+{
+  "code_of_laws": {
+    "name": "Code of Laws",
+    "cost": 20,
+    "era": "ancient",
+    "unlocks": "Survey, Discipline, Urban Planning, God King",
+    "id": "code_of_laws"
+  },
+  "craftsmanship": {
+    "name": "Craftsmanship",
+    "cost": 40,
+    "era": "ancient",
+    "unlocks": "Ilkum, Agoge",
+    "eureka": "Improve 3 tiles.",
+    "id": "craftsmanship"
+  },
+  "foreign_trade": {
+    "name": "Foreign Trade",
+    "cost": 40,
+    "era": "ancient",
+    "unlocks": "Trader unit, Maritime Industries, Caravansaries, Join War agreement",
+    "eureka": "Discover a second continent.",
+    "description": "Allows Trade Routes.",
+    "id": "foreign_trade"
+  },
+  "military_tradition": {
+    "name": "Military Tradition",
+    "cost": 50,
+    "era": "ancient",
+    "unlocks": "Strategos, Maneuver",
+    "eureka": "Clear a Barbarian outpost.",
+    "description": "Grants flanking and support combat bonuses to all units.",
+    "id": "military_tradition"
+  },
+  "state_workforce": {
+    "name": "State Workforce",
+    "cost": 70,
+    "era": "ancient",
+    "unlocks": "Conscription, Corvée",
+    "eureka": "Build any district.",
+    "id": "state_workforce"
+  },
+  "early_empire": {
+    "name": "Early Empire",
+    "cost": 70,
+    "era": "ancient",
+    "unlocks": "Colonization, Land Surveyors, Open Borders agreement",
+    "eureka": "Grow your civilization to at least 6 population.",
+    "description": "Unlocks the ability to enforce borders and grant Open Borders.",
+    "id": "early_empire"
+  },
+  "mysticism": {
+    "name": "Mysticism",
+    "cost": 50,
+    "era": "ancient",
+    "unlocks": "Oracle, Inspiration policy, Revelation policy",
+    "eureka": "Found a Pantheon",
+    "description": "Awards 1 Envoy",
+    "id": "mysticism"
+  },
+  "games_and_recreation": {
+    "name": "Games and Recreation",
+    "cost": 110,
+    "era": "classical",
+    "unlocks": "Colosseum, Arena, Entertainment complex, Insulae policy",
+    "eureka": "Research the Construction technology.",
+    "id": "games_and_recreation"
+  },
+  "political_philosophy": {
+    "name": "Political Philosophy",
+    "cost": 110,
+    "era": "classical",
+    "unlocks": "Autocracy, Classical Republic, Oligarchy, Charismatic Leader, Diplomatic League",
+    "eureka": "Build a wonder.",
+    "id": "political_philosophy"
+  },
+  "drama_and_poetry": {
+    "name": "Drama and Poetry",
+    "cost": 110,
+    "era": "classical",
+    "unlocks": "Amphitheater, Theater Square, Literary Tradition policy",
+    "id": "drama_and_poetry"
+  },
+  "military_training": {
+    "name": "Military Training",
+    "cost": 120,
+    "era": "classical",
+    "unlocks": "Raid policy, Veterancy policy",
+    "eureka": "Build an Encampment",
+    "description": "Awards 1 Envoy",
+    "id": "military_training"
+  },
+  "defensive_tactics": {
+    "name": "Defensive Tactics",
+    "cost": 175,
+    "era": "classical",
+    "unlocks": "Limes policy, Bastions policy",
+    "eureka": "Be the target of a Declaration of War.",
+    "id": "defensive_tactics"
+  },
+  "recorded_history": {
+    "name": "Recorded History",
+    "cost": 175,
+    "era": "classical",
+    "unlocks": "Great Library, Natural Philosophy policy",
+    "eureka": "Build 2 Campus districts.",
+    "id": "recorded_history"
+  },
+  "theology": {
+    "name": "Theology",
+    "cost": 120,
+    "era": "classical",
+    "unlocks": "Temple, Mahabodhi Temple, Scripture policy",
+    "eureka": "Found a Religion.",
+    "description": "Awards 1 Envoy, obsoletes God King policy",
+    "id": "theology"
+  },
+  "naval_tradition": {
+    "name": "Naval Tradition",
+    "cost": 200,
+    "era": "medieval",
+    "unlocks": "Naval Infrastructure, Navigation",
+    "eureka": "Kill a unit with a Quadrireme",
+    "description": "Awards 1 Envoy.",
+    "id": "naval_tradition"
+  },
+  "feudalism": {
+    "name": "Feudalism",
+    "cost": 275,
+    "era": "medieval",
+    "unlocks": "Feudal Contract policy, Serfdom policy",
+    "eureka": "Build 6 Farms.",
+    "description": "+1 Food for each farm when 3 are adjacent. Obsoletes Agoge, Ilkum",
+    "id": "feudalism"
+  },
+  "civil_service": {
+    "name": "Civil Service",
+    "cost": 275,
+    "era": "medieval",
+    "unlocks": "Retainers policy, Meritocracy policy, Alliance agreement",
+    "eureka": "Grow a city to 10 population.",
+    "description": "Allows Alliances.",
+    "id": "civil_service"
+  },
+  "mercenaries": {
+    "name": "Mercenaries",
+    "cost": 290,
+    "era": "medieval",
+    "unlocks": "Professional Army, Sack, Trade Confederation",
+    "eureka": "Have 8 land combat units in your army.",
+    "description": "Awards 1 Envoy",
+    "id": "mercenaries"
+  },
+  "medieval_faires": {
+    "name": "Medieval Faires",
+    "cost": 385,
+    "era": "medieval",
+    "unlocks": "Medina Quarter, Aesthetics, Merchant Confederation",
+    "eureka": "Maintain 4 Trade Routes.",
+    "description": "Obsoletes Insulae",
+    "id": "medieval_faires"
+  },
+  "guilds": {
+    "name": "Guilds",
+    "cost": 385,
+    "era": "medieval",
+    "unlocks": "Chichen Itza, Craftsmen, Town Charters, Traveling Merchants",
+    "eureka": "Build 2 Markets",
+    "id": "guilds"
+  },
+  "divine_right": {
+    "name": "Divine Right",
+    "cost": 290,
+    "era": "medieval",
+    "unlocks": "Mont St. Michael, Monarchy, Chivalry, Gothic Architecture",
+    "eureka": "Build 2 Temples",
+    "description": "Obsoletes Corvee, Maneuver",
+    "id": "divine_right"
+  },
+  "exploration": {
+    "name": "Exploration",
+    "cost": 400,
+    "era": "renaissance",
+    "unlocks": "Merchant Republic, Native Conquest, Colonial Offices, Mission",
+    "eureka": "Build 2 Caravels.",
+    "description": "+1 Food from Pastures. Obsoletes Discipline, Survey, Urban Planning",
+    "id": "exploration"
+  },
+  "humanism": {
+    "name": "Humanism",
+    "cost": 540,
+    "era": "renaissance",
+    "unlocks": "Archaeological Museum, Art Museum, Frescoes, Invention",
+    "eureka": "Earn a Great Artist.",
+    "description": "Obsoletes Revelation",
+    "id": "humanism"
+  },
+  "diplomatic_service": {
+    "name": "Diplomatic Service",
+    "cost": 540,
+    "era": "renaissance",
+    "unlocks": "Machiavellianism, Spy unit, Resident Embassies agreement, Declare Holy War, Declare Liberation War, Declare Reconquest War, Declare Protectorate War",
+    "eureka": "Have an alliance with another civilization",
+    "description": "Allows Resident Embassies and your first Spy. Casus Belli may now be used to justify wars.",
+    "id": "diplomatic_service"
+  },
+  "reformed_church": {
+    "name": "Reformed Church",
+    "cost": 400,
+    "era": "renaissance",
+    "unlocks": "Theocracy, Religious Orders, Simultaneum, Wars of Religion",
+    "eureka": "Have 6 cities following your Religion.",
+    "id": "reformed_church"
+  },
+  "mercantilism": {
+    "name": "Mercantilism",
+    "cost": 655,
+    "era": "renaissance",
+    "unlocks": "Privateer, Logistics, Triangular Trade",
+    "eureka": "Earn a Great Merchant",
+    "description": "+1 Production from Camps, Obsoletes Caravansaries",
+    "id": "mercantilism"
+  },
+  "the_enlightenment": {
+    "name": "The Enlightenment",
+    "cost": 655,
+    "era": "renaissance",
+    "unlocks": "Free Market, Liberalism, Rationalism",
+    "eureka": "Earn 3 Great People.",
+    "description": "Religious Tourism effects are halved versus your civilization.",
+    "id": "the_enlightenment"
+  },
+  "colonialism": {
+    "name": "Colonialism",
+    "cost": 690,
+    "era": "industrial",
+    "unlocks": "Colonial Taxes, Press Gangs, Raj",
+    "eureka": "Research the Astronomy Technology",
+    "description": "Awards 1 Envoy. Obsoletes Maritime Industry",
+    "id": "colonialism"
+  },
+  "civil_engineering": {
+    "name": "Civil Engineering",
+    "cost": 875,
+    "era": "industrial",
+    "unlocks": "Public Works, Skyscrapers",
+    "eureka": "Build 7 different specialty districts",
+    "description": "Can build Farms on Hills. All cities gain +200 Fortification strength and bombardment ability. Obsoletes Bastions, Corvee, Gothic Architecture, Limes, Serfdom",
+    "id": "civil_engineering"
+  },
+  "nationalism": {
+    "name": "Nationalism",
+    "cost": 875,
+    "era": "industrial",
+    "unlocks": "Grande Armee, National Identity, Declare Colonial War",
+    "eureka": "Declare war using a casus belli.",
+    "description": "+1 Spy slot. Unlocks Corps and Fleets. Obsoletes Feudal Contract",
+    "id": "nationalism"
+  },
+  "opera_and_ballet": {
+    "name": "Opera and Ballet",
+    "cost": 690,
+    "era": "industrial",
+    "unlocks": "Bolshoi Theatre wonder, Grand Opera, Symphonies",
+    "eureka": "Build an Art Museum.",
+    "description": "Awards 1 Envoy.",
+    "id": "opera_and_ballet"
+  },
+  "natural_history": {
+    "name": "Natural History",
+    "cost": 830,
+    "era": "industrial",
+    "unlocks": "Archaeologist, Zoo, Hermitage, reveal Antiquity Sites",
+    "eureka": "Build an Archaeological Museum.",
+    "description": "Awards 1 Envoy",
+    "id": "natural_history"
+  },
+  "urbanization": {
+    "name": "Urbanization",
+    "cost": 1010,
+    "era": "industrial",
+    "unlocks": "Neighborhood district, Military Research, Public Transport",
+    "eureka": "Grow a city to 15 population.",
+    "id": "urbanization"
+  },
+  "scorched_earth": {
+    "name": "Scorched Earth",
+    "cost": 1010,
+    "era": "industrial",
+    "unlocks": "Expropriation, Military Organization, Total War",
+    "eureka": "Build 2 Field Cannons.",
+    "description": "Awards 1 Envoy. Obsoletes Colonization, Land Surveyors, Raid, Sack, Strategos",
+    "id": "scorched_earth"
+  },
+  "conservation": {
+    "name": "Conservation",
+    "cost": 1140,
+    "era": "modern",
+    "unlocks": "Naturalist unit, Resource Management policy, National Parks",
+    "eureka": "Have a Neighborhood district with Breathtaking Appeal.",
+    "description": "Awards 1 Envoy. Builders may plant Woods. Old growth Woods gain +1 Appeal.",
+    "id": "conservation"
+  },
+  "mass_media": {
+    "name": "Mass Media",
+    "cost": 1280,
+    "era": "modern",
+    "unlocks": "Cristo Redentor, Broadway, Propaganda",
+    "eureka": "Research Radio.",
+    "description": "Obsoletes Retainers",
+    "id": "mass_media"
+  },
+  "mobilization": {
+    "name": "Mobilization",
+    "cost": 1280,
+    "era": "modern",
+    "unlocks": "Levee en Masse policy, Defensive Pact agreement, Declare War of Territorial Expansion",
+    "eureka": "Have 3 Corps in your army.",
+    "description": "Unlocks Army and Armada. Obsoletes Conscription",
+    "id": "mobilization"
+  },
+  "capitalism": {
+    "name": "Capitalism",
+    "cost": 1420,
+    "era": "modern",
+    "unlocks": "Laissez-Faire, Market Economy",
+    "eureka": "Build 3 Stock Exchanges.",
+    "description": "Obsoletes Trade Confederation, Traveling Merchants",
+    "id": "capitalism"
+  },
+  "ideology": {
+    "name": "Ideology",
+    "cost": 600,
+    "era": "modern",
+    "unlocks": "Police State policy",
+    "eureka": "-",
+    "description": "+1 Spy slot",
+    "id": "ideology"
+  },
+  "nuclear_program": {
+    "name": "Nuclear Program",
+    "cost": 1560,
+    "era": "modern",
+    "unlocks": "Nobel Prize, Nuclear Espionage",
+    "eureka": "Build a Research Lab.",
+    "description": "Obsoletes Inspiration",
+    "id": "nuclear_program"
+  },
+  "suffrage": {
+    "name": "Suffrage",
+    "cost": 1560,
+    "era": "modern",
+    "unlocks": "Democracy, Arsenal of Democracy, Economic Union, New Deal, Their Finest Hour",
+    "eureka": "Build 4 Sewers.",
+    "description": "Obsoletes Liberalism, Medina Quarter, Naval Infrastructure, Town Charters",
+    "id": "suffrage"
+  },
+  "totalitarianism": {
+    "name": "Totalitarianism",
+    "cost": 1560,
+    "era": "modern",
+    "unlocks": "Fascism, Gunboat Diplomacy, Lightning Warfare, Martial Law, Third Alternative",
+    "eureka": "Build 3 Military Academies.",
+    "description": "Obsoletes Charismatic Leader, Chivalry, Maneuver",
+    "id": "totalitarianism"
+  },
+  "class_struggle": {
+    "name": "Class Struggle",
+    "cost": 1560,
+    "era": "modern",
+    "unlocks": "Communism, Collectivization, Defense of the Motherland, Five-Year Plan, Patriotic War",
+    "eureka": "Build 3 Factories.",
+    "description": "Obsoletes Craftsmen, Natural Philosophy",
+    "id": "class_struggle"
+  },
+  "cultural_heritage": {
+    "name": "Cultural Heritage",
+    "cost": 1700,
+    "era": "atomic",
+    "unlocks": "Sydney Opera House, Heritage Tourism, reveal Shipwreck resource",
+    "eureka": "Have 3 Themed Museums,",
+    "description": "Awards 1 Envoy",
+    "id": "cultural_heritage"
+  },
+  "cold_war": {
+    "name": "Cold War",
+    "cost": 1900,
+    "era": "atomic",
+    "unlocks": "Containment, Cryptography, International Waters",
+    "eureka": "Research the Nuclear Fission technology.",
+    "description": "+1 Spy slot. Obsoletes Maritime Industries, Press Gangs",
+    "id": "cold_war"
+  },
+  "professional_sports": {
+    "name": "Professional Sports",
+    "cost": 1900,
+    "era": "atomic",
+    "unlocks": "Maracanã Stadium, Stadium, Sports Media",
+    "eureka": "Build 4 Entertainment Complex districts.",
+    "description": "Obsoletes Aesthetics, Grand Opera",
+    "id": "professional_sports"
+  },
+  "rapid_deployment": {
+    "name": "Rapid Deployment",
+    "cost": 2100,
+    "era": "atomic",
+    "unlocks": "Military First",
+    "eureka": "Build an Aerodrome or Airstrip on a foreign continent.",
+    "description": "Allows airlift between Airports. Obsoletes Grand Armee.",
+    "id": "rapid_deployment"
+  },
+  "space_race": {
+    "name": "Space Race",
+    "cost": 2100,
+    "era": "atomic",
+    "unlocks": "Integrated Space Cell, Satellite Broadcasts",
+    "eureka": "Build a Spaceport district.",
+    "description": "Obsoletes Military Research",
+    "id": "space_race"
+  },
+  "globalization": {
+    "name": "Globalization",
+    "cost": 2400,
+    "era": "information",
+    "unlocks": "Ecommerce, International Space Agency, Strategic Air Force",
+    "eureka": "Build 3 Airports.",
+    "description": "+1 Gold to Plantations. Obsoletes Their Finest Hour, Triangular Trade. Repeatable for additional Score.",
+    "id": "globalization"
+  },
+  "social_media": {
+    "name": "Social Media",
+    "cost": 2400,
+    "era": "information",
+    "unlocks": "Collective Activism, Online Communities",
+    "eureka": "Research the Telecommunications technology.",
+    "description": "Repeatable for additional Score.",
+    "id": "social_media"
+  }
+}

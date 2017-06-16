@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { GameDataProvider } from '../../providers/game-data/game-data';
 /**
  * Generated class for the InfoCardComponent component.
  *
@@ -11,12 +11,22 @@ import { Component } from '@angular/core';
   templateUrl: 'info-card.html'
 })
 export class InfoCardComponent {
-
-  text: string;
-
-  constructor() {
+  @Input()
+  id:string="unchanged";
+  name:string="not loaded name";
+  description:string="not loaded";
+  constructor(
+    private gameData: GameDataProvider
+  ) {
     console.log('Hello InfoCardComponent Component');
-    this.text = 'Hello World';
+
+  }
+
+  ngOnInit(){
+    this.gameData.getJSON("technologies.json").subscribe((data)=>{
+      this.name = data[this.id].name;
+      this.description = data[this.id].description;
+    });
   }
 
 }

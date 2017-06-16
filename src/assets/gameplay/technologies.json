@@ -16,7 +16,7 @@
     "cost":25,
     "eureka":"None",
     "description":"Allows harvesting of cattle and sheep",
-    "unlocks":
+    "unlocks": 
     {
       "improvements":["pasture","camp"],
       "units":["kurgan"]
@@ -108,6 +108,36 @@
     "prerequisites":[
       "mining"
     ]
+  },
+  "wheel":{
+    "name":"Wheel",
+    "id":"wheel",
+    "cost":999999,
+    "eureka":"Mine a resource",
+    "description":"N/Af",
+    "unlocks":{
+      "units":["heavy_chariot"]
+    },
+    "prerequisites":[
+      "mining"
+    ]
+  },
+  "celestial_navigation":{
+    "name":"Celestial Navigation",
+    "id":"celestial_navigation",
+    "cost":999999,
+    "eureka":"Improve 2 sea resources",
+    "description":"Allows Traders to embark, and allows harvesting of Fish",
+    "unlocks":{
+      "buildings":["lighthouse"],
+      "district":["harbor","royal_navy_dockyard"]
+    },
+    "prerequisites":[
+      "sailing"
+    ]
+  },
+  "currency":{
+
   }
 
 }

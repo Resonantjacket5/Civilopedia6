@@ -15,6 +15,8 @@ import { GameDataProvider } from '../../providers/game-data/game-data';
 })
 export class UnitPage {
   unit:any=null;
+
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,

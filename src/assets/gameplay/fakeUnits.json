@@ -5,10 +5,36 @@
       "id":"scout",
       "description":"Fast-moving Ancient era recon unit."
     },
+    "warrior":{
+      "name":"Warrior",
+      "id":"warrior",
+      "movement":2,
+      "melee_str":20,
+      "cost":40
+    },
     "archer":{
       "name":"Archer",
       "id":"archer",
       "description":"Effective ranged unit, using a bow to slay its enemies"
+    },
+    "galley":{
+      "name":"Galley",
+      "id":"galley",
+      "requires":{"tech":"sailing"},
+      "movement":3,
+      "melee_str":25,
+      "cost":65,
+      "maintenance":1
+    },
+    "heavy_chariot":{
+      "name":"Heavy Chariot",
+      "id":"heavy_chariot",
+      "description":"Chariots gain +1 movement when they start in open terrain",
+      "requires":{"tech":"wheel"},
+      "movement":2,
+      "melee_str":28,
+      "cost":65,
+      "maintenance":1
     }
   }
 }

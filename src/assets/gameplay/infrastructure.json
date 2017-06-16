@@ -69,6 +69,17 @@
     "library":{
       "district":"campus"
     }
-  }
+  },
+  "improvements":{
+    "pasture":{
+      "yields":{
+        "base":{
+          "production":1
+        }
+      }
+    },
+    "camp":{
 
+    }
+  }
 }
