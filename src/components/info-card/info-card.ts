@@ -29,8 +29,10 @@ export class InfoCardComponent {
   @Input()
   id:string="unchanged";
 
+  header:string;
   name:string="not loaded name";
   description:string="not loaded";
+  tag:string = ""; //image tage if needed
   constructor(
     public navCtrl: NavController,
     private gameData: GameDataProvider
@@ -50,6 +52,7 @@ export class InfoCardComponent {
         //   this.name = data[this.id].name;
         //   this.description = data[this.id].description;
         // });
+        this.header = "Prerequisite Tech"
         this.gameData.getTechnology(this.id).subscribe((data)=>{
           this.name = data.name;
           this.description = data.description;
@@ -71,12 +74,14 @@ export class InfoCardComponent {
           if(arr[0]===undefined)
           {
             found = arr[1];
+            this.header = "Prerequisite Tech"
             this.category = "technology";
           }
           // tech not found
           else if (arr[1]===undefined)
           {
             found = arr[0];
+            this.header = "Prerequisite Civic"
             this.category = "civic";
           }
           else
@@ -91,9 +96,11 @@ export class InfoCardComponent {
         });
         break;
       case "unit":
+        this.header = "Unit"
         this.gameData.getUnit(this.id).subscribe((data)=>{
           this.name = data.name;
           this.description = data.description;
+          this.tag = "_portrait";
         })
         break;
       default:

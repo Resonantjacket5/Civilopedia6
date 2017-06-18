@@ -15,6 +15,17 @@
 
 
 <ion-content padding>
+  <!-- <ion-list>
+    <ion-item *ngFor="let unit of units">
+      <img src="./assets/images/{{unit.id}}_portrait.png" />
+      <h2>
+        {{unit.name}}
+      </h2>
+      <p>
+        {{unit.description}}
+      </p>
+    </ion-item>
+  </ion-list> -->
   <ion-card *ngFor="let unit of units" (click)="openPage(unit.id)">
     <ion-item text-wrap>
       <h2>
@@ -23,6 +34,9 @@
       <p>
         {{unit.description}}
       </p>
+      <ion-thumbnail item-end>
+        <img src="./assets/images/unit/{{unit.id}}_portrait.png" />
+      </ion-thumbnail>
     </ion-item>
   </ion-card>
 </ion-content>

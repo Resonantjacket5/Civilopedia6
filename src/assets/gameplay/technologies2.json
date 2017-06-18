@@ -1,0 +1,692 @@
+{
+  "pottery": {
+    "name": "Pottery",
+    "cost": "25",
+    "era": "ancient",
+    "unlocks": "Granary building",
+    "description": "Allows harvesting of Wheat and Rice.",
+    "id": "pottery"
+  },
+  "animal_husbandry": {
+    "name": "Animal Husbandry",
+    "cost": "25",
+    "era": "ancient",
+    "unlocks": {
+      "improvements":["camp", "pasture"]
+      },
+    "description": "Allows harvesting of Cattle and Sheep.",
+    "id": "animal_husbandry"
+  },
+  "mining": {
+    "name": "Mining",
+    "cost": "25",
+    "era": "ancient",
+    "unlocks": {
+        "improvements":["mine", "quarry"]
+      },
+    "description": "Allows chopping of Woods, and harvesting of Copper.",
+    "id": "mining"
+  },
+  "sailing": {
+    "name": "Sailing",
+    "cost": "50",
+    "era": "ancient",
+    "unlocks": {
+      "improvements":["fishing_boats"],
+      "units":["galley"]
+    },
+    "eureka": "Found a city on the coast.",
+    "description": "Allows Builders to embark.",
+    "id": "sailing"
+  },
+  "astrology": {
+    "name": "Astrology",
+    "cost": "50",
+    "era": "ancient",
+    "unlocks": {
+      "wonders":["stonehenge"],
+      "districts":["holy_site"],
+      "buildings":["shrine"]
+    },
+    "eureka": "Find a Natural Wonder.",
+    "id": "astrology"
+  },
+  "irrigation": {
+    "name": "Irrigation",
+    "cost": "50",
+    "era": "ancient",
+    "unlocks": {
+      "improvements":["plantation"],
+      "wonders":["hanging_gardens"]
+      },
+    "eureka": "Farm a resource",
+    "description": "Allows clearing of Marsh.",
+    "id": "irrigation",
+    "requires":["pottery"]
+  },
+  "writing": {
+    "name": "Writing",
+    "cost": "50",
+    "era": "ancient",
+    "unlocks":{
+      "districts":["campus"],
+      "buildings":["library"]
+    },
+    "eureka": "Meet another civilization",
+    "id": "writing",
+    "requires":["pottery"]
+  },
+  "archery": {
+    "name": "Archery",
+    "cost": "50",
+    "era": "ancient",
+    "unlocks": {"units":["archer"]},
+    "eureka": "Kill a unit with a Slinger",
+    "id": "archery",
+    "requires":["animal_husbandry"]
+  },
+  "masonry": {
+    "name": "Masonry",
+    "cost": "80",
+    "era": "ancient",
+    "unlocks": {
+      "units":["battering_ram"],
+      "wonders":["pyramids"],
+      "buildings":["ancient_walls"]},
+    "eureka": "Build a Quarry",
+    "description": "Allows harvesting Stone",
+    "id": "masonry",
+    "requires":["masonry"]
+  },
+  "bronze_working": {
+    "name": "Bronze Working",
+    "cost": "80",
+    "era": "ancient",
+    "unlocks": {
+      "districts":["encampment"],
+      "buildings":["barracks"],
+      "units":["spearman"]
+    },
+    "eureka": "Kill 3 Barbarians",
+    "description": "Allows chopping of Rainforest and reveals Iron",
+    "id": "bronze_working",
+    "requires":["mining"]
+  },
+  "wheel": {
+    "name": "Wheel",
+    "cost": "80",
+    "era": "ancient",
+    "unlocks":
+    {
+      "units":["heavy_chariot"],
+      "buildings":["water_mill"]
+    },
+    "eureka": "Mine a Resource",
+    "id": "wheel",
+    "requires":["mining"]
+  },
+  "celestial_navigation": {
+    "name": "Celestial Navigation",
+    "cost": "120",
+    "era": "classical",
+    "unlocks": {
+      "wonders":["great_lighthouse"],
+      "districts":["harbor"],
+      "buildings":["lighthouse"]
+    },
+    "eureka": "Improve 2 sea resources",
+    "description": "Allows Traders to embark, and harvesting of Fish.",
+    "id": "celestial_navigation",
+    "requires":["sailing","astrology"]
+  },
+  "currency": {
+    "name": "Currency",
+    "cost": "120",
+    "era": "classical",
+    "unlocks": {
+      "districts":["commercial_hub"],
+      "buildings":["market"]
+    },
+    "eureka": "Make a Trade Route",
+    "id": "currency",
+    "requires":["writing"]
+  },
+  "horseback_riding": {
+    "name": "Horseback Riding",
+    "cost": "120",
+    "era": "classical",
+    "unlocks": {
+      "units":["horseman"],
+      "improvements":["stables"]
+    },
+    "eureka": "Build a Pasture",
+    "id": "horseback_riding",
+    "requires":["animal_husbandry"]
+  },
+  "iron_working": {
+    "name": "Iron Working",
+    "cost": "120",
+    "era": "classical",
+    "unlocks": {
+      "units":["swordsman"]
+    },
+    "eureka": "Build an Iron Mine",
+    "id": "iron_working",
+    "requires":["bronze_working"]
+  },
+  "shipbuilding": {
+    "name": "Shipbuilding",
+    "cost": "200",
+    "era": "classical",
+    "unlocks": {
+      "units":["quadrireme"],
+      "districts":["colossus"]
+    },
+    "eureka": "Own 2 Galleys",
+    "description": "Allows all land units to embark.",
+    "id": "shipbuilding",
+    "requires":["sailing"]
+  },
+  "mathematics": {
+    "name": "Mathematics",
+    "cost": "200",
+    "era": "classical",
+    "unlocks": {"wonders":["Petra"]},
+    "eureka": "Build 3 different specialty districts",
+    "description": "+1 Movement for all naval units.",
+    "id": "mathematics",
+    "requires":["currency"]
+  },
+  "construction": {
+    "name": "Construction",
+    "cost": "200",
+    "era": "classical",
+    "unlocks": {
+      "wonders":["terracotta_army"],
+      "units":["siege_tower"]
+    },
+    "eureka": "Build a Water Mill",
+    "id": "construction",
+    "requires":["horseback_riding","masonry"]
+  },
+  "engineering": {
+    "name": "Engineering",
+    "cost": "200",
+    "era": "classical",
+    "unlocks": {
+      "buildings":["Aqueduct"],
+      "units":["catapult"]
+    },
+    "eureka": "Build Ancient Walls",
+    "id": "engineering",
+    "requires":["wheel"]
+  },
+  "military_tactics": {
+    "name": "Military Tactics",
+    "cost": "275",
+    "era": "medieval",
+    "unlocks": {
+      "wonders":["huey_teocalli"],
+      "units":["pikeman", "berserker", "samurai"]
+    },
+    "eureka": "Kill a unit with a Spearman",
+    "id": "military_tactics",
+    "requires":["mathematics"]
+  },
+  "apprenticeship": {
+    "name": "Apprenticeship",
+    "cost": "275",
+    "era": "medieval",
+    "unlocks": "Workshop, Industrial Zone",
+    "eureka": "Build 3 Mines",
+    "description": "+1 Production to the Mine Improvement",
+    "id": "apprenticeship",
+    "requires":["currency","horseback_riding"]
+  },
+  "stirrups": {
+    "name": "Stirrups",
+    "cost": "275",
+    "era": "medieval",
+    "unlocks": "Knight",
+    "eureka": "Have the Feudalism civic",
+    "id": "stirrups",
+    "requires":"horseback_riding"
+  },
+  "machinery": {
+    "name": "Machinery",
+    "cost": "275",
+    "era": "medieval",
+    "unlocks": "Crossbowman, Lumber Mill",
+    "eureka": "Own 3 Archers",
+    "id": "machinery",
+    "requires":["iron_working","engineering"]
+  },
+  "education": {
+    "name": "Education",
+    "cost": "310",
+    "era": "medieval",
+    "unlocks": "University, Hagia Sophia",
+    "eureka": "Earn a Great Scientist",
+    "id": "education",
+    "requires":["apprenticeship","mathematics"]
+  },
+  "military_engineering": {
+    "name": "Military Engineering",
+    "cost": "355",
+    "era": "medieval",
+    "unlocks": "Armory, Military Engineer, Medieval Road",
+    "eureka": "Build an Aqueduct",
+    "description": "[Routes upgrade to Medieval Road]",
+    "id": "military_engineering",
+    "requires":["construction"]
+  },
+  "castles": {
+    "name": "Castles",
+    "cost": "355",
+    "era": "medieval",
+    "unlocks": "Alhambra, Medieval Walls",
+    "eureka": "Have a government with 6 policy slots",
+    "description": "Bonus Culture for Great Wall adjacency. Catherine gains an extra Spy slot.",
+    "id": "castles",
+    "requires":["iron_working"]
+  },
+  "cartography": {
+    "name": "Cartography",
+    "cost": "490",
+    "era": "renaissance",
+    "unlocks": "Caravel",
+    "eureka": "Build 2 Harbors",
+    "description": "+1 Gold from Fishing Boats, naval and embarked units can enter Ocean, +1 move for Embarked units",
+    "id": "cartography",
+    "requires":["shipbuilding"]
+  },
+  "mass_production": {
+    "name": "Mass Production",
+    "cost": "490",
+    "era": "renaissance",
+    "unlocks": "Shipyard, Venetian Arsenal",
+    "eureka": "Build a Lumber Mill",
+    "id": "mass_production",
+    "requires":["education","shipbuilding"]
+  },
+  "banking": {
+    "name": "Banking",
+    "cost": "490",
+    "era": "renaissance",
+    "unlocks": "Bank, Great Zimbabwe",
+    "eureka": "Have the Guilds civic",
+    "description": "+1 Gold from Quarry",
+    "id": "banking",
+    "requires":["education","apprenticeship","stirrups"]
+  },
+  "gunpowder": {
+    "name": "Gunpowder",
+    "cost": "490",
+    "era": "renaissance",
+    "unlocks": "Reveal Niter resource, Musketman",
+    "eureka": "Build an Armory",
+    "id": "gunpowder",
+    "requires":["military_engineering","apprenticeship","stirrups"]
+  },
+  "printing": {
+    "name": "Printing",
+    "cost": "490",
+    "era": "renaissance",
+    "unlocks": "Forbidden City",
+    "eureka": "Build 2 Universities",
+    "description": "+1 diplomatic visibility, double Tourism from Writing works",
+    "id": "printing",
+    "requires":["machinery"]
+  },
+  "square_rigging": {
+    "name": "Square Rigging",
+    "cost": "600",
+    "era": "renaissance",
+    "unlocks": "Frigate",
+    "eureka": "Kill a unit with a Musketman",
+    "id": "square_rigging",
+    "requires":["cartography"]
+  },
+  "astronomy": {
+    "name": "Astronomy",
+    "cost": "600",
+    "era": "renaissance",
+    "unlocks": "Potala Palace wonder",
+    "eureka": "Build a University adjacent to a mountain.",
+    "id": "astronomy",
+    "requires":["education"]
+  },
+  "metal_casting": {
+    "name": "Metal Casting",
+    "cost": "600",
+    "era": "renaissance",
+    "unlocks": "Bombard",
+    "eureka": "Own 2 Crossbowman",
+    "id": "metal_casting",
+    "requires":["gunpowder"]
+  },
+  "siege_tactics": {
+    "name": "Siege Tactics",
+    "cost": "600",
+    "era": "renaissance",
+    "unlocks": "Renaissance Walls, Fort improvement",
+    "eureka": "Own 2 Bombards",
+    "id": "siege_tactics",
+    "requires":["castles"]
+  },
+  "industrialization": {
+    "name": "Industrialization",
+    "cost": "700",
+    "era": "industrial",
+    "unlocks": "Factory, Ruhr Valley wonder, [Industrial Roads?]",
+    "eureka": "Build 3 Workshops",
+    "description": "+1 Production to Mine",
+    "id": "industrialization",
+    "requires":["mass_production"]
+  },
+  "scientific_theory": {
+    "name": "Scientific Theory",
+    "cost": "700",
+    "era": "industrial",
+    "unlocks": "Oxford University",
+    "eureka": "Have The Enlightenment civic",
+    "description": "Allows Research Agreement diplomatic action. +1 Food from Plantation.",
+    "id": "scientific_theory",
+    "requires":["astronomy"]
+  },
+  "ballistics": {
+    "name": "Ballistics",
+    "cost": "700",
+    "era": "industrial",
+    "unlocks": "Field Cannon",
+    "eureka": "Have 2 Forts in your territory",
+    "id": "ballistics",
+    "requires":["metal_casting"]
+  },
+  "military_science": {
+    "name": "Military Science",
+    "cost": "700",
+    "era": "industrial",
+    "unlocks": "Military Academy, Cavalry, Garde Imperiale",
+    "eureka": "Kill a unit with a Knight",
+    "id": "military_science",
+    "requires":["siege_tactics","printing"]
+  },
+  "steam_power": {
+    "name": "Steam Power",
+    "cost": "805",
+    "era": "industrial",
+    "unlocks": "Ironclad, Reveal Coal, Railroad",
+    "eureka": "Build 2 Shipyards",
+    "description": "[Routes upgrade to Railroad], +2 Movement for embarked units",
+    "id": "steam_power",
+    "requires":["square_rigging","industrialization"]
+  },
+  "sanitation": {
+    "name": "Sanitation",
+    "cost": "805",
+    "era": "industrial",
+    "unlocks": "Medic, Sewer",
+    "eureka": "Build 2 Neighborhoods",
+    "description": "+1 Housing to Stepwell Improvements",
+    "id": "sanitation",
+    "requires":["scientific_theory"]
+  },
+  "economics": {
+    "name": "Economics",
+    "cost": "805",
+    "era": "industrial",
+    "unlocks": "Big Ben, Stock Exchange",
+    "eureka": "Build 2 Banks",
+    "id": "economics",
+    "requires":["banking","metal_casting","scientific_theory"]
+  },
+  "rifling": {
+    "name": "Rifling",
+    "cost": "805",
+    "era": "industrial",
+    "unlocks": "Ranger",
+    "eureka": "Build a Niter Mine",
+    "id": "rifling",
+    "requires":["ballistics","military_science"]
+  },
+  "flight": {
+    "name": "Flight",
+    "cost": "900",
+    "era": "modern",
+    "unlocks": "Hangar building, Aerodrome district, Observation Balloon, Biplane, Airstrip improvement",
+    "eureka": "Build an Industrial era or later wonder",
+    "description": "Bonus Tourism to all improvements that provide Culture.",
+    "id": "flight",
+    "requires":["industrialization","scientific_theory"]
+  },
+  "replaceable_parts": {
+    "name": "Replaceable Parts",
+    "cost": "900",
+    "era": "modern",
+    "unlocks": "Infantry",
+    "eureka": "Own 3 Musketman",
+    "description": "Upgrades Farm improvements to Mechanized Agriculture. +1 Food Adjacency bonus for Farms.",
+    "id": "replaceable_parts",
+    "requires":["economics"]
+  },
+  "steel": {
+    "name": "Steel",
+    "cost": "900",
+    "era": "modern",
+    "unlocks": "Eiffel Tower, Artillery, Battleship",
+    "eureka": "Build a Coal Mine",
+    "description": "+1 Production to Lumber Mill",
+    "id": "steel",
+    "requires":["ballistics"]
+  },
+  "electricity": {
+    "name": "Electricity",
+    "cost": "985",
+    "era": "modern",
+    "unlocks": "Seaport, Submarine, Power Plant",
+    "eureka": "Own 3 Privateers",
+    "id": "electricity",
+    "requires":["steam_power"]
+  },
+  "radio": {
+    "name": "Radio",
+    "cost": "985",
+    "era": "modern",
+    "unlocks": "Resort improvement, Broadcast Center",
+    "eureka": "Build a National Park",
+    "id": "radio",
+    "requires":["steam_power","flight"]
+  },
+  "chemistry": {
+    "name": "Chemistry",
+    "cost": "985",
+    "era": "modern",
+    "unlocks": "Research Lab, AT Crew",
+    "eureka": "Complete a Research Agreement",
+    "id": "chemistry",
+    "requires":["sanitation"]
+  },
+  "combustion": {
+    "name": "Combustion",
+    "cost": "985",
+    "era": "modern",
+    "unlocks": "Tank, Reveal Oil, Oil Well",
+    "eureka": "Extract an Artifact",
+    "description": "+1 Movement for embarked units",
+    "id": "combustion",
+    "requires":["steel","rifling"]
+  },
+  "advanced_flight": {
+    "name": "Advanced Flight",
+    "cost": "1065",
+    "era": "atomic",
+    "unlocks": "Airport, Bomber, Fighter, Reveal Aluminum",
+    "eureka": "Build 3 Biplanes",
+    "id": "advanced_flight",
+    "requires":["radio"]
+  },
+  "rocketry": {
+    "name": "Rocketry",
+    "cost": "1065",
+    "era": "atomic",
+    "unlocks": "Spaceport district, Missile Silo improvement, Launch Earth Satellite Project",
+    "eureka": "Boost only through Great Scientist or Spy",
+    "description": "+1 Production from Quarry",
+    "id": "rocketry",
+    "requires":["radio","chemistry"]
+  },
+  "advanced_ballistics": {
+    "name": "Advanced Ballistics",
+    "cost": "1065",
+    "era": "atomic",
+    "unlocks": {
+      "units":[
+        "anti_air_gun",
+        "machine_gun"
+        ]},
+    "eureka": "Build 2 Power Plants",
+    "id": "advanced_ballistics",
+    "requires":["steel","replaceable_parts "]
+  },
+  "combined_arms": {
+    "name": "Combined Arms",
+    "cost": "1065",
+    "era": "atomic",
+    "unlocks": {
+      "units":[
+        "aircraft_carrier",
+        " destroyer"
+        ]},
+    "eureka": "Build an Airstrip",
+    "id": "combined_arms",
+    "requires":["steel","combustion"]
+  },
+  "plastics": {
+    "name": "Plastics",
+    "cost": "1065",
+    "era": "atomic",
+    "unlocks": {"improvements":["offshore_platform"]},
+    "eureka": "Build an Oil Well",
+    "description": "+1 Food from Fishing Boats",
+    "id": "plastics",
+    "requires":["combustion"]
+  },
+  "computers": {
+    "name": "Computers",
+    "cost": "1195",
+    "era": "atomic",
+    "eureka": "Have a government with 8 policy slots",
+    "description": "+1 Spy, Double all Tourism yields",
+    "id": "computers",
+    "requires":["electricity"]
+  },
+  "nuclear_fission": {
+    "name": "Nuclear Fission",
+    "cost": "1195",
+    "era": "atomic",
+    "unlocks": "Build Nuclear Device project, Manhattan Project, Reveal Uranium",
+    "eureka": "Boost only through Great Scientist or Spy",
+    "id": "nuclear_fission",
+    "requires":["advanced_ballistics","combined_arms"]
+  },
+  "synthetic_materials": {
+    "name": "Synthetic Materials",
+    "cost": "1195",
+    "era": "atomic",
+    "unlocks": "Helicopter",
+    "eureka": "Build 2 Aerodromes",
+    "description": "+1 Gold from Camps",
+    "id": "synthetic_materials",
+    "requires":["plastics"]
+  },
+  "telecommunications": {
+    "name": "Telecommunications",
+    "cost": "1340",
+    "era": "information",
+    "unlocks": "Nuclear Submarine",
+    "eureka": "Build 2 Broadcast Centers",
+    "id": "telecommunications",
+    "requires":["computers"]
+  },
+  "satellites": {
+    "name": "Satellites",
+    "cost": "1340",
+    "era": "information",
+    "unlocks": "Mechanized Infantry, Moon Landing project",
+    "eureka": "Boost only through Great Scientist or Spy",
+    "id": "satellites",
+    "requires":["advanced_flight","rocketry"]
+  },
+  "guidance_systems": {
+    "name": "Guidance Systems",
+    "cost": "1340",
+    "era": "information",
+    "unlocks": "Rocket Artillery, Mobile SAM",
+    "eureka": "Kill a Fighter",
+    "id": "guidance_systems",
+    "requires":["advanced_ballistics","rocketry"]
+  },
+  "lasers": {
+    "name": "Lasers",
+    "cost": "1340",
+    "era": "information",
+    "unlocks": "Jet Fighter, Missile Cruiser",
+    "eureka": "Boost only through Great Scientist or Spy",
+    "id": "lasers",
+    "requires":["nuclear_fission"]
+  },
+  "composites": {
+    "name": "Composites",
+    "cost": "1340",
+    "era": "information",
+    "unlocks": "Modern Armor, Modern AT",
+    "eureka": "Own 3 Tanks",
+    "id": "composites",
+    "requires":["synthetic_materials"]
+  },
+  "stealth_technology": {
+    "name": "Stealth Technology",
+    "cost": "1340",
+    "era": "information",
+    "unlocks": "Jet Bomber",
+    "eureka": "Boost only through Great Scientist or Spy",
+    "id": "stealth_technology",
+    "requires":["synthetic_materials"]
+  },
+  "robotics": {
+    "name": "Robotics",
+    "cost": "1560",
+    "era": "information",
+    "unlocks": "Launch Mars Habitation project",
+    "eureka": "Have the Globalization civic",
+    "description": "+1 Production from Pastures",
+    "id": "robotics",
+    "requires":["computers"]
+  },
+  "nuclear_fusion": {
+    "name": "Nuclear Fusion",
+    "cost": "1560",
+    "era": "information",
+    "unlocks": "Build Thermonuclear Device, Launch Mars Reactor, Operation Ivy",
+    "eureka": "Boost only through Great Scientist or Spy",
+    "id": "nuclear_fusion",
+    "requires":["lasers"]
+  },
+  "nanotechnology": {
+    "name": "Nanotechnology",
+    "cost": "1560",
+    "era": "information",
+    "unlocks": "Launch Mars Hydroponics",
+    "eureka": "Build an Aluminum mine",
+    "id": "nanotechnology",
+    "requires":["composites"]
+  },
+  "future_tech": {
+    "name": "Future Tech",
+    "cost": "1780",
+    "era": "information",
+    "description": "Awards Score points",
+    "id": "future_tech"
+  }
+}

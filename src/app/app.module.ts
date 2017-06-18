@@ -43,15 +43,21 @@ import { GameDataProvider } from '../providers/game-data/game-data';
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp, {locationStrategy: 'hash'}, {
-      links:[
-        { component: UnitsPage, segment:'units' },
-        { component: UnitPage, segment: 'units/:unitId' },
-        { component: TechnologiesPage, name: 'Technologies', segment: 'technologies' },
-        { component: TechnologyPage, segment: 'technologies/:techId' }
-
-      ]
-    })
+    IonicModule.forRoot(MyApp
+      //, {locationStrategy: 'hash'}
+    //, {
+    //   links:[
+    //
+    //     { component: TechnologiesPage, segment: 'technologies' },
+    //     { component: TechnologyPage, segment: 'technologies/:techId' },
+    //     { component: UnitsPage, segment:'units' },
+    //     { component: UnitPage, segment: 'units/:unitId' },
+    //     { component: DistrictsPage, segment: 'districts' },
+    //     { component: DistrictPage, segment: 'districts/:districtId'}
+    //
+    //   ]
+    // }
+  )
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -68,8 +74,8 @@ import { GameDataProvider } from '../providers/game-data/game-data';
   providers: [
     StatusBar,
     SplashScreen,
-    Deeplinks,
-    {provide: APP_BASE_HREF, useValue: "/"},
+    //Deeplinks,
+    //{provide: APP_BASE_HREF, useValue: "/"},
     // {provide: ErrorHandler, useClass: IonicErrorHandler},
     GameDataProvider
   ]

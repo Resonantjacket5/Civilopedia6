@@ -8,7 +8,8 @@ import { GameDataProvider } from '../../providers/game-data/game-data';
  * on Ionic pages and navigation.
  */
 @IonicPage({
-  name: 'Kyle'
+  name: 'Technology',
+  segment:'technology'
 })
 @Component({
   selector: 'page-technology',
@@ -28,9 +29,9 @@ export class TechnologyPage {
     console.log(id);
     if( id != null )
     {
-      this.gameData.getJSON("technologies.json").subscribe( (data) =>{
-        this.technology = data[id];
-      });
+      this.gameData.getTechnology(id).subscribe((data)=>{
+        this.technology = data;
+      })
     }
     else
     {

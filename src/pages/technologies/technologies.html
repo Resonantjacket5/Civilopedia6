@@ -12,11 +12,21 @@
     </button>
     <ion-title>Technologies</ion-title>
   </ion-navbar>
+  <ion-toolbar>
+    <ion-buttons>
+      <button ion-button>
+        press
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding text-wrap>
   <ion-card *ngFor="let tech of technologies" (click)="openPage(tech.id)">
     <ion-item>
+      <ion-thumbnail item-end>
+        <img src="./assets/images/technology/{{tech.id}}.png" />
+      </ion-thumbnail>
       <h2>
         {{tech.name}}
       </h2>

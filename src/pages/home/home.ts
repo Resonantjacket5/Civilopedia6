@@ -12,8 +12,8 @@ export class HomePage {
 
   }
 
-  openBuilding()
+  openPage()
   {
-    this.navCtrl.push('buildings');
+    this.navCtrl.push('civics');
   }
 }

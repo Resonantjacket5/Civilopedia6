@@ -1,10 +1,24 @@
 <!-- Generated template for the InfoCardComponent component -->
-<ion-card href="/" (click)="openPage()">
-  <ion-card-header>
-    Required Tech/ Civic
-  </ion-card-header>
-  <ion-card-content>
-    {{name}} /
+<ion-card (click)="openPage()">
+  <!-- <ion-card-header>
+    {{header}}
+  </ion-card-header> -->
+  <!-- <ion-card-content>
+    <ion-item>
+      <ion-thumbnail item-end>
+        <img src="./assets/images/{{category}}/{{id}}.png" />
+      </ion-thumbnail>
+      <p>
+        {{description}}
+      </p>
+    </ion-item>
+  </ion-card-content> -->
+  <ion-item>
+    <ion-thumbnail item-end>
+      <img src="./assets/images/{{category}}/{{id}}{{tag}}.png" />
+    </ion-thumbnail>
+    <h2>{{name}}</h2>
     {{description}}
-  </ion-card-content>
+
+  </ion-item>
 </ion-card>

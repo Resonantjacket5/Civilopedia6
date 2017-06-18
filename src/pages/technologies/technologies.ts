@@ -19,8 +19,9 @@ export class TechnologiesPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public gameData: GameDataProvider) {
-    this.gameData.getJSON("technologies.json").subscribe((data)=>{
-      this.technologies = Object.keys(data).map(key=>data[key]);
+      
+    this.gameData.getTechnologies().subscribe((data)=>{
+      this.technologies = data;
     });
   }
 

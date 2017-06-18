@@ -162,6 +162,20 @@
     }
   },
   "improvements":{
+    "farm":{
+      "terrain":[
+        "grassland",
+        "plains"
+      ],
+      "resources":[
+        "wheat",
+        "rice"
+      ],
+      "yields":{
+        "food":1,
+        "housing":0.5
+      }  
+    },
     "pasture":{
       "yields":{
         "base":{

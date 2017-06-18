@@ -20,14 +20,14 @@ export class GameDataProvider {
   }
 
   public getTechnology(techId:string):Observable<any>{
-    return this.getJSON("technologies.json").map((techs)=>{
+    return this.getJSON("technologies2.json").map((techs)=>{
       return techs[techId];
     });
   }
 
   public getTechnologies(): Observable<Array<any>> {
-    return this.getJSON("technologies.json").map((rawData)=>{
-      return Object.keys(rawData.technologies).map(key => rawData.technologies[key]);
+    return this.getJSON("technologies2.json").map((rawData)=>{
+      return Object.keys(rawData).map(key => rawData[key]);
     });
   }
 

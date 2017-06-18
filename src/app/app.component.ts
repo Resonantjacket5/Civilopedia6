@@ -14,7 +14,7 @@ import { TechnologyPage } from '../pages/technology/technology';
 import { DistrictsPage } from '../pages/districts/districts';
 import { DistrictPage } from '../pages/district/district';
 
-
+import { CivicsPage } from '../pages/civics/civics';
 
 @Component({
   templateUrl: 'app.html'
@@ -25,7 +25,7 @@ export class MyApp {
     { title: 'Home', component: HomePage },
     { title: 'Units', component: UnitsPage },
     { title: 'Technologies', component: TechnologiesPage },
-    { title: 'Districts', component: DistrictsPage }
+    { title: 'Districts', component: DistrictsPage },
   ];
 
   @ViewChild(Nav) nav: Nav;
@@ -34,8 +34,8 @@ export class MyApp {
   constructor(
     platform: Platform,
     statusBar: StatusBar,
-    splashScreen: SplashScreen,
-    deeplinks: Deeplinks
+    splashScreen: SplashScreen
+    //deeplinks: Deeplinks
   ) {
 
     platform.ready().then(() => {

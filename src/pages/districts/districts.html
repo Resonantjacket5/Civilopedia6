@@ -17,15 +17,15 @@
 <ion-content padding>
   <ion-card *ngFor="let district of districts" (click)="openPage(district.id)">
     <ion-item>
-      <ion-thumbnail>
-        <img src="./assets/images/{{district.id}}.png" />
-      </ion-thumbnail>
       <h2>
         {{district.name}}
       </h2>
       <p>
         {{district.description}}
       </p>
+      <ion-thumbnail item-end>
+        <img src="./assets/images/districts/{{district.id}}.png" />
+      </ion-thumbnail>
     </ion-item>
   </ion-card>
 </ion-content>

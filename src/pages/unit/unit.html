@@ -15,25 +15,30 @@
 
 <ion-content padding>
   <div *ngIf="unit">
+
     <ion-card >
+
       <ion-card-header>
         {{unit.name}}
       </ion-card-header>
       <ion-card-content>
-        <p>
-          {{unit.description}}
-        </p>
-        <p>
-          Type:{{unit.class}}
-        </p>
-        <p>
-          Costs: {{unit.cost}}
-        </p>
-        <p>
-          Movement: {{unit.move}}
-        </p>
-
-
+        <ion-item>
+          <ion-thumbnail item-end>
+            <img src="./assets/images/unit/{{unit.id}}_portrait.png"/>
+          </ion-thumbnail>
+          <p>
+            {{unit.description}}
+          </p>
+          <p>
+            Type:{{unit.class}}
+          </p>
+          <p>
+            Costs: {{unit.cost}}
+          </p>
+          <p>
+            Movement: {{unit.move}}
+          </p>
+        </ion-item>
       </ion-card-content>
     </ion-card>
     <div *ngIf="unit.requires">
