@@ -8,7 +8,9 @@ import { TechnologyPage } from '../technology/technology';
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
-@IonicPage()
+@IonicPage({
+  segment:'technologies'
+})
 @Component({
   selector: 'page-technologies',
   templateUrl: 'technologies.html',
@@ -19,7 +21,7 @@ export class TechnologiesPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public gameData: GameDataProvider) {
-      
+
     this.gameData.getTechnologies().subscribe((data)=>{
       this.technologies = data;
     });

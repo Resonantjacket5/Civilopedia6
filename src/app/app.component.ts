@@ -14,7 +14,6 @@ import { TechnologyPage } from '../pages/technology/technology';
 import { DistrictsPage } from '../pages/districts/districts';
 import { DistrictPage } from '../pages/district/district';
 
-import { CivicsPage } from '../pages/civics/civics';
 
 @Component({
   templateUrl: 'app.html'
@@ -26,6 +25,7 @@ export class MyApp {
     { title: 'Units', component: UnitsPage },
     { title: 'Technologies', component: TechnologiesPage },
     { title: 'Districts', component: DistrictsPage },
+    { title: 'Civics', component: "civics"}
   ];
 
   @ViewChild(Nav) nav: Nav;
