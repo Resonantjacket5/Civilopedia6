@@ -19,22 +19,33 @@ export class UnitsPage {
     { name: "Slinger", description: "Primitive ranged unit which slings rocks"}
   ];
   units2:any;
+
+
+
+
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     public gameData: GameDataProvider) {
       //https://stackoverflow.com/questions/6857468/converting-a-js-object-to-an-array
-    this.gameData.getJSON('fakeUnits.json').subscribe( (data) =>{
-      //this.units = Object.values(data.units);
-      this.units = Object.keys(data.units).map(key=>data.units[key]);
 
-    });
     //console.log(this.gameData.getJSON('fakeUnits.json'));
     //this.gameData.getUnits().subscribe( data => {console.log(data)});
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad UnitsPage');
+
+    this.gameData.getUnits().subscribe((data2)=>{
+      console.log(data2);
+      this.units = data2;
+    });
+
+
+    // subscribe( (data) =>{
+    //   this.units = Object.keys(data.units).map(key=>data.units[key]);
+    // });
   }
 
   openPage(id:string):void

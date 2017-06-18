@@ -16,7 +16,7 @@
     "cost":25,
     "eureka":"None",
     "description":"Allows harvesting of cattle and sheep",
-    "unlocks": 
+    "unlocks":
     {
       "improvements":["pasture","camp"],
       "units":["kurgan"]
@@ -114,7 +114,7 @@
     "id":"wheel",
     "cost":999999,
     "eureka":"Mine a resource",
-    "description":"N/Af",
+    "description":"Allows ",
     "unlocks":{
       "units":["heavy_chariot"]
     },

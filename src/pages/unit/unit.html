@@ -15,20 +15,29 @@
 
 <ion-content padding>
   <div *ngIf="unit">
-    <ion-item >
-      <h2>
+    <ion-card >
+      <ion-card-header>
         {{unit.name}}
-      </h2>
-      <p>
-        {{unit.description}}
-      </p>
-      <p>
-        Costs: {{unit.cost}}
-        Movement: {{unit.movement}}
-      </p>
-    </ion-item>
+      </ion-card-header>
+      <ion-card-content>
+        <p>
+          {{unit.description}}
+        </p>
+        <p>
+          Type:{{unit.class}}
+        </p>
+        <p>
+          Costs: {{unit.cost}}
+        </p>
+        <p>
+          Movement: {{unit.move}}
+        </p>
+
+
+      </ion-card-content>
+    </ion-card>
     <div *ngIf="unit.requires">
-      <info-card [id]="unit.requires.tech">
+      <info-card [category]="tecivic" [id]="unit.requires">
       </info-card>
     </div>
   </div>

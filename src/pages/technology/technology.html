@@ -30,14 +30,23 @@
       <ion-card-header>Eureka Bonus</ion-card-header>
       <ion-card-content>{{technology.eureka}}</ion-card-content>
     </ion-card>
+    <div *ngFor="let prereq of technology.prerequisites">
+      <info-card [category]="techString" [id]="prereq">
+      </info-card>
+    </div>
+
+
     <div *ngIf="technology.unlocks">
       <ion-item *ngFor="let i of technology.unlocks.improvements">
         {{i}}
       </ion-item>
       <ion-card *ngFor="let unit of technology.unlocks.units">
         {{unit}} <a href="/#/units/{{unit}}">goto</a>
-
       </ion-card>
+
+      <info-card *ngFor="let unit of technology.unlocks.units">
+      </info-card>
     </div>
+
   </ion-list>
 </ion-content>

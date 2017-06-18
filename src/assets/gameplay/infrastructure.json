@@ -1,48 +1,140 @@
 {
   "districts":{
     "city_center":{
+      "name":"City Center",
+      "id":"city_center",
       "buildings":[
-
+        "kyle"
       ]
     },
     "campus":{
+      "name":"Campus",
+      "id":"campus",
       "buildings":[
         "library","university","madrasa","research_lab"
       ],
       "type":"science",
-      "adj_yield":{
+      "adj_yields":{
         "mountain":1,
         "rainforest":0.5,
         "district":0.5
+      },
+      "requires":{
+        "category":"technology",
+        "id":"writing"
       }
     },
     "holy_site":{
+      "name":"Holy Site",
+      "id":"holy_site",
+      "type":"faith",
       "buildings":[
         "shrine","temple","stave_church","other_worship"
-      ]
+      ],
+      "adj_yields":{
+        "natural_wonder":2,
+        "mountain":1,
+        "forest":0.5,
+        "district":0.5
+      },
+      "maintenance":1,
+      "requires":{
+        "category":"technology",
+        "id":"astrology"
+      }
     },
-    "theatre_square":{
+    "theater_square":{
+      "name":"Theater Square",
+      "id":"theater_square",
       "type":"culture",
-      "adj_yield":{
+      "adj_yields":{
         "wonder":1,
         "district":0.5
+      },
+      "maintenance":1,
+      "requires":{
+        "category":"civic",
+        "id":"drama_and_poetry"
       }
     },
     "harbor":{
+      "name":"Harbor",
+      "id":"harbor",
       "type":"gold",
-      "adj_yield":{
+      "adj_yields":{
         "coastal":1,
         "district":0.5,
         "city_center":2
+      },
+      "maintenance":1,
+      "requires":{
+        "category":"technology",
+        "id":"celestial_navigation"
       }
     },
-    "commercial":{
+    "commercial_hub":{
+      "name":"Commercial Hub",
+      "id":"commercial_hub",
       "type":"gold",
-      "adj_yield":{
+      "adj_yields":{
         "one river":2,
         "harbor":2,
         "district":0.5
+      },
+      "requires":{
+        "category":"technology",
+        "id":"currency"
       }
+    },
+    "industrial_zone":{
+      "name":"Industrial Zone",
+      "id":"industrial_zone",
+      "type":"production",
+      "adj_yields":{
+        "mine":1,
+        "quarry":1,
+        "district":0.5
+      },
+      "maintenance":1,
+      "requires":{
+        "category":"technology",
+        "id":"apprenticeship"
+      }
+    },
+    "encampment":{
+      "name":"Encampment",
+      "id":"Encampment",
+      "type":"military",
+      "requires":{
+        "category":"technology",
+        "id":"bronze_working"
+      }
+    },
+    "entertainment_complex":{
+      "name":"Entertainment Complex",
+      "id":"entertainment_complex",
+      "type":"amenity",
+      "maintenance":1
+    },
+    "aqueduct":{
+      "name":"Aqueduct",
+      "id":"aqueduct",
+      "type":"housing"
+    },
+    "neighborhood":{
+      "name":"Neighborhood",
+      "id":"neighborhood",
+      "type":"housing"
+    },
+    "aerodrome":{
+      "name":"Aerodrome",
+      "id":"aerodrome",
+      "type":"air"
+    },
+    "spaceport":{
+      "name":"Spaceport",
+      "id":"spaceport",
+      "type":"space"
     }
   },
   "buildings":{
@@ -64,8 +156,7 @@
     },
     "medieval_walls":{
       "district":"city_center"
-    }
-    "other city center",
+    },
     "library":{
       "district":"campus"
     }
@@ -77,9 +168,6 @@
           "production":1
         }
       }
-    },
-    "camp":{
-
     }
   }
 }

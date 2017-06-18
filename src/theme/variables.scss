@@ -13,7 +13,10 @@ $font-path: "../assets/fonts";
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
 
 
-
+.large-icon {
+  max-width: 200px !important;
+  max-height: 200px !important;
+}
 
 // Named Color Variables
 // --------------------------------------------------

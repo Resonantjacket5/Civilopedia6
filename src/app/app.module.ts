@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { ErrorHandler, NgModule } from '@angular/core';
+import { APP_BASE_HREF } from '@angular/common';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -10,10 +11,21 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { UnitsPage } from '../pages/units/units';
 import { UnitPage } from '../pages/unit/unit';
+
+
 import { TechnologiesPage } from '../pages/technologies/technologies';
 import { TechnologyPage } from '../pages/technology/technology';
-import { GameDataProvider } from '../providers/game-data/game-data';
+
+
+import { BuildingPage } from '../pages/building/building';
+import { DistrictsPage } from '../pages/districts/districts';
+import { DistrictPage } from '../pages/district/district';
+
+
 import { InfoCardComponent } from '../components/info-card/info-card';
+
+import { GameDataProvider } from '../providers/game-data/game-data';
+
 
 @NgModule({
   declarations: [
@@ -23,6 +35,9 @@ import { InfoCardComponent } from '../components/info-card/info-card';
     UnitPage,
     TechnologiesPage,
     TechnologyPage,
+    BuildingPage,
+    DistrictsPage,
+    DistrictPage,
     InfoCardComponent
   ],
   imports: [
@@ -45,13 +60,17 @@ import { InfoCardComponent } from '../components/info-card/info-card';
     UnitsPage,
     UnitPage,
     TechnologiesPage,
-    TechnologyPage
+    TechnologyPage,
+    BuildingPage,
+    DistrictsPage,
+    DistrictPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Deeplinks,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    {provide: APP_BASE_HREF, useValue: "/"},
+    // {provide: ErrorHandler, useClass: IonicErrorHandler},
     GameDataProvider
   ]
 })

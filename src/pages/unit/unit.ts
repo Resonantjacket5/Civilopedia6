@@ -16,6 +16,9 @@ import { GameDataProvider } from '../../providers/game-data/game-data';
 export class UnitPage {
   unit:any=null;
 
+  techString:string = "technology";
+  civicString:string = "civic";
+  tecivic:string = "tecivic";
 
   constructor(
     public navCtrl: NavController,
@@ -26,8 +29,8 @@ export class UnitPage {
     console.log(id);
     if( id != null )
     {
-      this.gameData.getJSON("fakeUnits.json").subscribe( (data) =>{
-        this.unit = data.units[id];
+      this.gameData.getUnit(id).subscribe( (data) =>{
+        this.unit = data;
       });
     }
   }

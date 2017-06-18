@@ -29,6 +29,6 @@ export class TechnologiesPage {
   }
 
   openPage(id:string):void {
-    this.navCtrl.push(TechnologyPage,{"technology":id});
+    this.navCtrl.push(TechnologyPage,{"techId":id});
   }
 }

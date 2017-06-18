@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { Platform } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-
 /*
   Generated class for the GameDataProvider provider.
 
@@ -12,33 +12,85 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class GameDataProvider {
 
-  constructor(public http: Http) {
+  constructor(
+    public http: Http,
+    public platform: Platform
+  ) {
     console.log('Hello GameDataProvider Provider');
   }
 
-  public getTechnologies(): void {
-    this.getJSON("technologies.json").subscribe( (data) => {
-      return Object.keys(data.technologies).map(key => data.technologies[key]);
+  public getTechnology(techId:string):Observable<any>{
+    return this.getJSON("technologies.json").map((techs)=>{
+      return techs[techId];
     });
   }
 
-  // public getUnits(): Observable<any> {
-  //   return this.getJSON("fakeUnits.json").subscribe( (data) => {
-  //     return Object.keys(data.units).map(key => data.units[key]);
-  //   });
-  // }
+  public getTechnologies(): Observable<Array<any>> {
+    return this.getJSON("technologies.json").map((rawData)=>{
+      return Object.keys(rawData.technologies).map(key => rawData.technologies[key]);
+    });
+  }
 
-  // public getUnits(): Observable<any>{
-  //   return this.getJSON("fakeUnits.json")
-  //   .map( data =>
-  //   {
-  //     Object.keys(data.units).map(key => data.units[key]);
-  //   });
-  // }
+  public getCivic(civicId:string):Observable<any>{
+    return this.getJSON("civics.json").map((civics)=>{
+      return civics[civicId];
+    });
+  }
+
+  public getCivics():Observable<Array<any>>{
+    return this.getJSON("civics.json").map((rawData)=>{
+      return Object.keys(rawData).map(key => rawData[key]);
+    });
+  }
+
+  public getUnit(unitId:string): Observable<any>{
+    return this.getJSON("units2.json").map((units)=>{
+      return units[unitId];
+    });
+  }
+
+  public getUnits(): Observable<Array<any>> {
+    return this.getJSON("units2.json").map((rawData)=>{
+      //convert to array
+       return Object.keys(rawData).map(key=>rawData[key]);
+    });
+  }
+
+  public getDistrict(districtId:string): Observable<any>{
+    return this.getJSON("infrastructure.json").map((rawData)=>{
+      console.log(rawData.districts);
+      return rawData.districts[districtId];
+    });
+  }
+
+  public getDistricts(): Observable<Array<any>> {
+    return this.getJSON("infrastructure.json").map((rawData)=>{
+      return Object.keys(rawData.districts).map(key=>
+      {
+        return rawData.districts[key];
+      });
+    });
+  }
 
   public getJSON(fileName:string): Observable<any> {
-    return this.http.get("../../assets/gameplay/"+fileName)
-    .map((res:any) => res.json());
+    if(this.platform.is('android'))
+    {
+      console.log("is android");
+      return this.http.get("../www/assets/gameplay/"+fileName)
+      .map((res:any) => res.json());
+    }
+    else
+    {
+      console.log("is not android");
+      return this.http.get("../../assets/gameplay/"+fileName)
+      .map((res:any) => res.json());
+    }
+
     //.catch((err:any) => Observable.throw(err.json().error));
+  }
+
+
+  static toArray(obj:Object):Array<any>{
+    return Object.keys(obj).map(key=>obj[key]);
   }
 }

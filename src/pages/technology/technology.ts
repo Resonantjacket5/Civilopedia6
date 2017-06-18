@@ -16,12 +16,15 @@ import { GameDataProvider } from '../../providers/game-data/game-data';
 })
 export class TechnologyPage {
   technology:any;
+
+  techString:string = "technology";
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     public gameData: GameDataProvider
   ) {
-    let id = this.navParams.get("technology");
+    let id = this.navParams.get("techId");
     console.log(id);
     if( id != null )
     {

@@ -8,7 +8,9 @@ import { BuildingPage } from '../building/building';
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
-@IonicPage()
+@IonicPage({
+  name:"buildings"
+})
 @Component({
   selector: 'page-buildings',
   templateUrl: 'buildings.html',
