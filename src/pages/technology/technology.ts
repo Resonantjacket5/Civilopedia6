@@ -8,8 +8,8 @@ import { GameDataProvider } from '../../providers/game-data/game-data';
  * on Ionic pages and navigation.
  */
 @IonicPage({
-  name: 'Technology',
-  segment:'technology'
+  name: 'technology',
+  segment:'technologies/:techId'
 })
 @Component({
   selector: 'page-technology',

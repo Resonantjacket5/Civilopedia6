@@ -25,20 +25,25 @@ import { DistrictPage } from '../pages/district/district';
 import { InfoCardComponent } from '../components/info-card/info-card';
 
 import { GameDataProvider } from '../providers/game-data/game-data';
+import { TestComponent } from '../components/test/test';
+import { CivIconComponent } from '../components/civ-icon/civ-icon';
 
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+    /*
     UnitsPage,
     UnitPage,
     TechnologiesPage,
     TechnologyPage,
     BuildingPage,
     DistrictsPage,
-    DistrictPage,
-    InfoCardComponent
+    DistrictPage,*/
+    //InfoCardComponent,
+    //TestComponent,
+    //CivIconComponent
   ],
   imports: [
     BrowserModule,
@@ -63,13 +68,13 @@ import { GameDataProvider } from '../providers/game-data/game-data';
   entryComponents: [
     MyApp,
     HomePage,
-    UnitsPage,
+    /*UnitsPage,
     UnitPage,
     TechnologiesPage,
     TechnologyPage,
     BuildingPage,
     DistrictsPage,
-    DistrictPage
+    DistrictPage*/
   ],
   providers: [
     StatusBar,

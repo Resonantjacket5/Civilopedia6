@@ -8,7 +8,9 @@ import { UnitPage } from '../unit/unit';
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
-@IonicPage()
+@IonicPage({
+  name:"units"
+})
 @Component({
   selector: 'page-units',
   templateUrl: 'units.html',
@@ -50,6 +52,6 @@ export class UnitsPage {
 
   openPage(id:string):void
   {
-    this.navCtrl.push(UnitPage,{"unitId":id});
+    this.navCtrl.push("unit",{"unitId":id});
   }
 }

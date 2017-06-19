@@ -1,0 +1,74 @@
+<!--
+  Generated template for the ImprovementPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Improvement</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="improvement">
+    <ion-card>
+      <ion-item-group>
+        <ion-item>
+          <ion-thumbnail item-end>
+            <img src="./assets/images/improvements/{{improvement.id}}.png"/>
+          </ion-thumbnail>
+          <h2>
+            {{improvement.name}}
+          </h2>
+        </ion-item>
+        <div *ngIf="improvement.terrains">
+          <ion-item-divider>
+            Allowed Terrain
+          </ion-item-divider>
+          <ion-item >
+            <div *ngFor="let terrain of improvement.terrains">
+              {{terrain}}
+            </div>
+          </ion-item>
+        </div>
+      </ion-item-group>
+    </ion-card>
+    <ion-card>
+      <ion-card-content>
+        <ion-item-group>
+          <ion-item-divider>
+            Base yields
+          </ion-item-divider>
+          <ion-item *ngFor="let y of improvement.base_yields">
+            +{{y.value}} <civ-icon category="yields" [id]=y.yield></civ-icon> {{y.yield}}
+          </ion-item>
+          <!-- <ion-item-divider>
+            Bonus yields
+          </ion-item-divider>
+          <ion-item *ngFor="let y of improvement.bonus_yields">
+            +{{y.value}} <civ-icon category="yields" [id]=y.yield></civ-icon> {{y.yield}}
+          </ion-item> -->
+          <div *ngFor="let y of improvement.bonus_yields">
+            <ion-item-divider>
+              Research {{y.id}}
+            </ion-item-divider>
+            <ion-item>
+              <ion-row>
+                <ion-col>
+                  +{{y.value}} <civ-icon category="yields" [id]=y.yield></civ-icon> {{y.yield}}
+                </ion-col>
+                <ion-col>
+
+                </ion-col>
+              </ion-row>
+            </ion-item>
+          </div>
+        </ion-item-group>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

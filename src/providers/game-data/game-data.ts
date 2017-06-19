@@ -72,6 +72,22 @@ export class GameDataProvider {
     });
   }
 
+  public getImprovement(improvementId:string):Observable<any>{
+    return this.getJSON("infrastructure.json").map((rawData)=>{
+      return rawData.improvements[improvementId];
+    })
+  }
+
+  public getImprovements(): Observable<any> {
+    return this.getJSON("infrastructure.json").map((rawData)=>{
+      return rawData.improvements
+      // return Object.keys(rawData.improvements).map(key=>
+      // {
+      //   return rawData.improvements[key];
+      // });
+    });
+  }
+
   public getJSON(fileName:string): Observable<any> {
     if(this.platform.is('android'))
     {

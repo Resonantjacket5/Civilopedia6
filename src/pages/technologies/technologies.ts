@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GameDataProvider } from '../../providers/game-data/game-data';
-import { TechnologyPage } from '../technology/technology';
+//import { TechnologyPage } from '../technology/technology';
 /**
  * Generated class for the TechnologiesPage page.
  *
@@ -9,7 +9,7 @@ import { TechnologyPage } from '../technology/technology';
  * on Ionic pages and navigation.
  */
 @IonicPage({
-  segment:'technologies'
+  name:'technologies'
 })
 @Component({
   selector: 'page-technologies',
@@ -32,6 +32,6 @@ export class TechnologiesPage {
   }
 
   openPage(id:string):void {
-    this.navCtrl.push(TechnologyPage,{"techId":id});
+    this.navCtrl.push("technology",{"techId":id});
   }
 }

@@ -8,7 +8,10 @@ import { GameDataProvider } from '../../providers/game-data/game-data';
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
-@IonicPage()
+@IonicPage({
+  name:'unit',
+  segment:'units/:unitId'
+})
 @Component({
   selector: 'page-unit',
   templateUrl: 'unit.html',

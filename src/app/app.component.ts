@@ -21,11 +21,17 @@ import { DistrictPage } from '../pages/district/district';
 export class MyApp {
   rootPage:any = HomePage;
   pages: Array<{title: string, component?:any}> = [
+    // { title: 'Home', component: HomePage },
+    // { title: 'Units', component: UnitsPage },
+    // { title: 'Technologies', component: "technologies" },
+    // { title: 'Districts', component: DistrictsPage },
+    // { title: 'Civics', component: "civics"}
     { title: 'Home', component: HomePage },
-    { title: 'Units', component: UnitsPage },
-    { title: 'Technologies', component: TechnologiesPage },
-    { title: 'Districts', component: DistrictsPage },
-    { title: 'Civics', component: "civics"}
+    { title: 'Units', component: "units" },
+    { title: 'Technologies', component: "technologies" },
+    { title: 'Civics', component: "civics"},
+    { title: 'Districts', component: "districts" },
+    { title: 'Improvements', component: 'improvements'},
   ];
 
   @ViewChild(Nav) nav: Nav;
@@ -41,18 +47,6 @@ export class MyApp {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      // deeplinks.routeWithNavController(this.nav,{
-      //   '/technologies':TechnologiesPage,
-      //   '/technology/:technologyId':TechnologyPage,
-      //   '/units':UnitsPage,
-      //   '/units/:unitId':UnitPage
-      // })
-      // .subscribe((match)=>{
-      //   console.log('Successfully routed',match);
-      // },(nomatch)=>{
-      //   console.warn('Unmatched route', nomatch);
-      // });
-
       statusBar.styleDefault();
       splashScreen.hide();
     });

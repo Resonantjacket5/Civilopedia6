@@ -1,187 +1,412 @@
 {
-  "districts":{
-    "city_center":{
-      "name":"City Center",
-      "id":"city_center",
-      "buildings":[
+  "districts": {
+    "city_center": {
+      "name": "City Center",
+      "id": "city_center",
+      "buildings": [
         "kyle"
       ]
     },
-    "campus":{
-      "name":"Campus",
-      "id":"campus",
-      "buildings":[
-        "library","university","madrasa","research_lab"
+    "campus": {
+      "name": "Campus",
+      "id": "campus",
+      "buildings": [
+        "library",
+        "university",
+        "madrasa",
+        "research_lab"
       ],
-      "type":"science",
-      "adj_yields":{
-        "mountain":1,
-        "rainforest":0.5,
-        "district":0.5
+      "type": "science",
+      "adj_yields": {
+        "mountain": 1,
+        "rainforest": 0.5,
+        "district": 0.5
       },
-      "requires":{
-        "category":"technology",
-        "id":"writing"
+      "requires": {
+        "category": "technology",
+        "id": "writing"
       }
     },
-    "holy_site":{
-      "name":"Holy Site",
-      "id":"holy_site",
-      "type":"faith",
-      "buildings":[
-        "shrine","temple","stave_church","other_worship"
+    "holy_site": {
+      "name": "Holy Site",
+      "id": "holy_site",
+      "type": "faith",
+      "buildings": [
+        "shrine",
+        "temple",
+        "stave_church",
+        "other_worship"
       ],
-      "adj_yields":{
-        "natural_wonder":2,
-        "mountain":1,
-        "forest":0.5,
-        "district":0.5
+      "adj_yields": {
+        "natural_wonder": 2,
+        "mountain": 1,
+        "forest": 0.5,
+        "district": 0.5
       },
-      "maintenance":1,
-      "requires":{
-        "category":"technology",
-        "id":"astrology"
+      "maintenance": 1,
+      "requires": {
+        "category": "technology",
+        "id": "astrology"
       }
     },
-    "theater_square":{
-      "name":"Theater Square",
-      "id":"theater_square",
-      "type":"culture",
-      "adj_yields":{
-        "wonder":1,
-        "district":0.5
+    "theater_square": {
+      "name": "Theater Square",
+      "id": "theater_square",
+      "type": "culture",
+      "adj_yields": {
+        "wonder": 1,
+        "district": 0.5
       },
-      "maintenance":1,
-      "requires":{
-        "category":"civic",
-        "id":"drama_and_poetry"
+      "maintenance": 1,
+      "requires": {
+        "category": "civic",
+        "id": "drama_and_poetry"
       }
     },
-    "harbor":{
-      "name":"Harbor",
-      "id":"harbor",
-      "type":"gold",
-      "adj_yields":{
-        "coastal":1,
-        "district":0.5,
-        "city_center":2
+    "harbor": {
+      "name": "Harbor",
+      "id": "harbor",
+      "type": "gold",
+      "adj_yields": {
+        "coastal": 1,
+        "district": 0.5,
+        "city_center": 2
       },
-      "maintenance":1,
-      "requires":{
-        "category":"technology",
-        "id":"celestial_navigation"
+      "maintenance": 1,
+      "requires": {
+        "category": "technology",
+        "id": "celestial_navigation"
       }
     },
-    "commercial_hub":{
-      "name":"Commercial Hub",
-      "id":"commercial_hub",
-      "type":"gold",
-      "adj_yields":{
-        "one river":2,
-        "harbor":2,
-        "district":0.5
+    "commercial_hub": {
+      "name": "Commercial Hub",
+      "id": "commercial_hub",
+      "type": "gold",
+      "adj_yields": {
+        "one river": 2,
+        "harbor": 2,
+        "district": 0.5
       },
-      "requires":{
-        "category":"technology",
-        "id":"currency"
+      "requires": {
+        "category": "technology",
+        "id": "currency"
       }
     },
-    "industrial_zone":{
-      "name":"Industrial Zone",
-      "id":"industrial_zone",
-      "type":"production",
-      "adj_yields":{
-        "mine":1,
-        "quarry":1,
-        "district":0.5
+    "industrial_zone": {
+      "name": "Industrial Zone",
+      "id": "industrial_zone",
+      "type": "production",
+      "adj_yields": {
+        "mine": 1,
+        "quarry": 1,
+        "district": 0.5
       },
-      "maintenance":1,
-      "requires":{
-        "category":"technology",
-        "id":"apprenticeship"
+      "maintenance": 1,
+      "requires": {
+        "category": "technology",
+        "id": "apprenticeship"
       }
     },
-    "encampment":{
-      "name":"Encampment",
-      "id":"Encampment",
-      "type":"military",
-      "requires":{
-        "category":"technology",
-        "id":"bronze_working"
+    "encampment": {
+      "name": "Encampment",
+      "id": "Encampment",
+      "type": "military",
+      "requires": {
+        "category": "technology",
+        "id": "bronze_working"
       }
     },
-    "entertainment_complex":{
-      "name":"Entertainment Complex",
-      "id":"entertainment_complex",
-      "type":"amenity",
-      "maintenance":1
+    "entertainment_complex": {
+      "name": "Entertainment Complex",
+      "id": "entertainment_complex",
+      "type": "amenity",
+      "maintenance": 1
     },
-    "aqueduct":{
-      "name":"Aqueduct",
-      "id":"aqueduct",
-      "type":"housing"
+    "aqueduct": {
+      "name": "Aqueduct",
+      "id": "aqueduct",
+      "type": "housing"
     },
-    "neighborhood":{
-      "name":"Neighborhood",
-      "id":"neighborhood",
-      "type":"housing"
+    "neighborhood": {
+      "name": "Neighborhood",
+      "id": "neighborhood",
+      "type": "housing"
     },
-    "aerodrome":{
-      "name":"Aerodrome",
-      "id":"aerodrome",
-      "type":"air"
+    "aerodrome": {
+      "name": "Aerodrome",
+      "id": "aerodrome",
+      "type": "air"
     },
-    "spaceport":{
-      "name":"Spaceport",
-      "id":"spaceport",
-      "type":"space"
+    "spaceport": {
+      "name": "Spaceport",
+      "id": "spaceport",
+      "type": "space"
     }
   },
-  "buildings":{
-    "granary":{
-      "district":"city_center",
-      "yields":[
+  "buildings": {
+    "granary": {
+      "district": "city_center",
+      "yields": [
         "+1 food",
         "+2 housing"
       ]
     },
-    "monument":{
-      "district":"city_center"
+    "monument": {
+      "district": "city_center"
     },
-    "water_mill":{
-      "district":"city_center"
+    "water_mill": {
+      "district": "city_center"
     },
-    "ancient_walls":{
-      "district":"city_center"
+    "ancient_walls": {
+      "district": "city_center"
     },
-    "medieval_walls":{
-      "district":"city_center"
+    "medieval_walls": {
+      "district": "city_center"
     },
-    "library":{
-      "district":"campus"
+    "library": {
+      "district": "campus"
     }
   },
-  "improvements":{
-    "farm":{
-      "terrain":[
+  "improvements": {
+    "farm": {
+      "name": "Farm",
+      "terrains": [
         "grassland",
         "plains"
       ],
-      "resources":[
+      "resources": [
         "wheat",
         "rice"
       ],
-      "yields":{
-        "food":1,
-        "housing":0.5
-      }  
-    },
-    "pasture":{
-      "yields":{
-        "base":{
-          "production":1
+      "base_yields": [
+        {
+          "yield": "food",
+          "value": 1
+        },
+        {
+          "yield": "housing",
+          "value": 0.5
         }
-      }
+      ],
+      "bonus_yields": [
+        {
+          "category": "technology",
+          "id": "replaceable_parts",
+          "yield": "food",
+          "value": 1
+        },
+        {
+          "category": "technology",
+          "id": "robotics",
+          "yield": "production",
+          "value": 1
+        }
+      ],
+      "id": "farm"
+    },
+    "pasture": {
+      "name": "Pasture",
+      "id":"pasture",
+      "requires":"animal_husbandry",
+      "base_yields": [
+        {
+          "yield": "production",
+          "value": 1
+        },
+        {
+          "yield": "housing",
+          "value": 0.5
+        }
+      ],
+      "bonus_yields": [
+        {
+          "category": "technology",
+          "id": "exploration",
+          "yield": "food",
+          "value": 1
+        },
+        {
+          "category": "technology",
+          "id": "robotics",
+          "yield": "production",
+          "value": 1
+        }
+      ],
+      "resources":[
+        "sheep","horses","cattle"
+      ]
+    },
+    "plantation": {
+      "name": "Plantation",
+      "id":"plantation",
+      "requires":"irrigation",
+      "base_yields": [
+        {
+          "yield": "gold",
+          "value": 1
+        },
+        {
+          "yield": "housing",
+          "value": 0.5
+        }
+      ],
+      "bonus_yields": [
+        {
+          "category": "technology",
+          "id": "scientific_theory",
+          "yield": "food",
+          "value": 1
+        },
+        {
+          "category": "technology",
+          "id": "globalization",
+          "yield": "gold",
+          "value": 1
+        }
+      ],
+      "resources":[
+        "bananas","citrus","cocoa","coffee","cotton","dyes",
+        "silk","sugar","tea","tobacco","wine"
+      ]
+    },
+    "camp": {
+      "name": "Camp",
+      "id":"camp",
+      "requires":"animal_husbandry",
+      "base_yields": [
+        {
+          "yield": "gold",
+          "value": 1
+        },
+        {
+          "yield": "housing",
+          "value": 0.5
+        }
+      ],
+      "bonus_yields": [
+        {
+          "category": "technology",
+          "id": "mercantilism",
+          "yield": "gold",
+          "value": 1
+        },
+        {
+          "category": "technology",
+          "id": "synthetic_materials",
+          "yield": "gold",
+          "value": 1
+        }
+      ],
+      "resources":["deer","fur","ivory","truffles"]
+    },
+    "fishing_boats": {
+      "name": "Fishing boats",
+      "id":"fishing_boats",
+      "requires":"sailing",
+      "base_yields": [
+        {
+          "yield": "food",
+          "value": 1
+        },
+        {
+          "yield": "housing",
+          "value": 0.5
+        }
+      ],
+      "bonus_yields": [
+        {
+          "category": "technology",
+          "id": "cartography",
+          "yield": "gold",
+          "value": 1
+        },
+        {
+          "category": "technology",
+          "id": "plastics",
+          "yield": "food",
+          "value": 1
+        }
+      ],
+      "resources":["fish","crab","whales","pearls"]
+    },
+    "mine": {
+      "name": "Mine",
+      "id":"mine",
+      "requires":"mining",
+      "base_yields": [
+        {
+          "yield": "production",
+          "value": 1
+        }
+      ],
+      "bonus_yields": [
+        {
+          "category": "technology",
+          "id": "apprenticeship",
+          "yield": "production",
+          "value": 1
+        },
+        {
+          "category": "technology",
+          "id": "Industrialization",
+          "yield": "production",
+          "value": 1
+        }
+      ],
+      "terrains":["hills"],
+      "resources":["copper","diamond","iron","mercury","niter","coal","aluminum","uranium"]
+    },
+    "quarry": {
+      "name": "Quarry",
+      "id":"quarry",
+      "requires":"mining",
+      "base_yields": [
+        {
+          "yield": "production",
+          "value": 1
+        }
+      ],
+      "bonus_yields": [
+        {
+          "category": "technology",
+          "id": "banking",
+          "yield": "gold",
+          "value": 1
+        },
+        {
+          "category": "technology",
+          "id": "rocketry",
+          "yield": "production",
+          "value": 1
+        }
+      ],
+      "resources":["stone","marble","gypsum"]
+    },
+    "lumber_mill": {
+      "name": "Lumber mill",
+      "id":"lumber_mill",
+      "requires":"mining",
+      "base_yields": [
+        {
+          "yield": "production",
+          "value": 1
+        }
+      ],
+      "bonus_yields": [
+        {
+          "category": "technology",
+          "id": "banking",
+          "yield": "gold",
+          "value": 1
+        },
+        {
+          "category": "technology",
+          "id": "rocketry",
+          "yield": "production",
+          "value": 1
+        }
+      ],
+      "resources":["stone","marble","gypsum"]
     }
   }
 }
