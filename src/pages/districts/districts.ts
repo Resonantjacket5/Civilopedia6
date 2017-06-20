@@ -38,6 +38,6 @@ export class DistrictsPage {
   }
 
   openPage(id:string):void{
-    this.navCtrl.push(DistrictPage,{"districtId":id})
+    this.navCtrl.push("district",{"districtId":id})
   }
 }

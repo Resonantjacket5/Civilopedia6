@@ -1,5 +1,5 @@
 <!-- Generated template for the InfoCardComponent component -->
-<ion-card (click)="openPage()">
+<div (click)="openPage()">
   <!-- <ion-card-header>
     {{header}}
   </ion-card-header> -->
@@ -18,7 +18,10 @@
       <img src="./assets/images/{{category}}/{{id}}{{tag}}.png" />
     </ion-thumbnail>
     <h2>{{name}}</h2>
-    {{description}}
+    <p>
+      {{description}}
+    </p>
+
 
   </ion-item>
-</ion-card>
+</div>

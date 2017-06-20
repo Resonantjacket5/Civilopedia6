@@ -44,7 +44,12 @@
             Base yields
           </ion-item-divider>
           <ion-item *ngFor="let y of improvement.base_yields">
-            +{{y.value}} <civ-icon category="yields" [id]=y.yield></civ-icon> {{y.yield}}
+            <div *ngIf="y.yield">
+              +{{y.value}} <civ-icon category="yields" [id]=y.yield></civ-icon> {{y.yield}}
+            </div>
+            <div>
+              {{y.notes}}
+            </div>
           </ion-item>
           <!-- <ion-item-divider>
             Bonus yields

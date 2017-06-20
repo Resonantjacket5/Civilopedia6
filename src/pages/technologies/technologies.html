@@ -11,28 +11,42 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Technologies</ion-title>
+    <ion-buttons end>
+      <button ion-button>
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
   <ion-toolbar>
     <ion-buttons>
       <button ion-button>
-        press
+        era
+      </button>
+      <button ion-button>
+        a-z
       </button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding text-wrap>
-  <ion-card *ngFor="let tech of technologies" (click)="openPage(tech.id)">
-    <ion-item>
-      <ion-thumbnail item-end>
-        <img src="./assets/images/technology/{{tech.id}}.png" />
-      </ion-thumbnail>
-      <h2>
-        {{tech.name}}
-      </h2>
-      <p>
-        {{tech.description}}
-      </p>
-    </ion-item>
-  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let tech of technologies" col-12 col-sm-6 col-md-4 col-lg-3>
+        <ion-card (click)="openPage(tech.id)">
+          <ion-item>
+            <ion-thumbnail item-end>
+              <img src="./assets/images/technology/{{tech.id}}.png" />
+            </ion-thumbnail>
+            <h2>
+              {{tech.name}}
+            </h2>
+            <p>
+              {{tech.description}}
+            </p>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

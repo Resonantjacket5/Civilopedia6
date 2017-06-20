@@ -7,7 +7,10 @@ import { GameDataProvider } from '../../providers/game-data/game-data';
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
-@IonicPage()
+@IonicPage({
+  name:"district",
+  segment:"districts/:districtId"
+})
 @Component({
   selector: 'page-district',
   templateUrl: 'district.html',
@@ -30,5 +33,4 @@ export class DistrictPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad DistrictPage');
   }
-
 }

@@ -14,34 +14,75 @@
 
 
 <ion-content padding>
+
   <div *ngIf="district">
-    <ion-card>
+    <ion-grid>
       <ion-row>
-        <ion-col>
-          <h2>
-            {{district.name}}
-          </h2>
+        <ion-col col-12 col-md-6>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title style="text-align:center">
+                {{district.name}}
+              </ion-card-title>
+              <img class="large-icon" src="./assets/images/districts/{{district.id}}.png"/>
+            </ion-card-header>
+            <ion-card-content text-wrap>
+              <ion-item>{{district.description}}</ion-item>
+              <div *ngIf="!(district.id=='city_center')">
+                <ion-item *ngIf="district.cost">
+                  Cost: {{district.cost}}<civ-icon category="yields" id="production"></civ-icon>production
+                </ion-item>
+                <ion-item *ngIf="!district.cost">
+                  Cost: 60 <civ-icon category="yields" id="production"></civ-icon>production
+                </ion-item>
+              </div>
+
+
+              <ion-list>
+                <div *ngIf="district.adj_yields">
+                  <ion-list-header>Adjacency yields</ion-list-header>
+                  <ion-item *ngFor="let k of keyGet(district.adj_yields)" >
+                    +1 <civ-icon category="yields" id="{{district.type}}"></civ-icon>{{district.type}} for every {{district.adj_yields[k]}} {{k}}
+                  </ion-item>
+                </div>
+                <div *ngIf="district.trade_yields">
+                  <ion-list-header>Domestic trade yields</ion-list-header>
+                  <ion-item  *ngFor="let y of district.trade_yields.domestic">
+                    +{{y.value}} <civ-icon category="yields" [id]=y.yield></civ-icon>{{y.yield}}
+                  </ion-item>
+                  <ion-list-header>International trade yields</ion-list-header>
+                  <ion-item  *ngFor="let y of district.trade_yields.international">
+                    +{{y.value}} <civ-icon category="yields" [id]=y.yield></civ-icon>{{y.yield}}
+                  </ion-item>
+                </div>
+                <div *ngIf="district.citizen_yields">
+                  <ion-list-header>Specialist yield</ion-list-header>
+                  <ion-item  *ngFor="let y of district.trade_yields.international">
+                    +{{y.value}} <civ-icon category="yields" [id]=y.yield></civ-icon>{{y.yield}}
+                  </ion-item>
+                </div>
+              </ion-list>
+            </ion-card-content>
+          </ion-card>
         </ion-col>
         <ion-col>
-          <img class="large-icon" src="./assets/images/districts/{{district.id}}.png"/>
+          <ion-card *ngFor="let building of district.buildings">
+            {{building}}
+          </ion-card>
+          <div *ngIf="district.requires">
+            <ion-card>
+              <ion-card-header *ngIf="district.requires.category=='technology'">
+                Required technology
+              </ion-card-header>
+              <ion-card-header *ngIf="district.requires.category=='civic'">
+                Required civic
+              </ion-card-header>
+              <info-card [category]="district.requires.category" [id]="district.requires.id">
+              </info-card>
+            </ion-card>
+          </div>
         </ion-col>
       </ion-row>
-      <ion-card-content>
-        content
-        <div *ngIf="district.adj_yields">
-          <p *ngFor="let adj of keyGet(district.adj_yields)">
-            {{adj}}:{{district.adj_yields[adj]}}
-          </p>
-        </div>
-      </ion-card-content>
-
-    </ion-card>
-    <ion-card *ngFor="let building of district.buildings">
-      {{building}}
-    </ion-card>
-    <div *ngIf="district.requires">
-      <info-card [category]="district.requires.category" [id]="district.requires.id">
-      </info-card>
-    </div>
+    </ion-grid>
   </div>
 </ion-content>

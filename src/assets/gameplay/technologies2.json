@@ -96,7 +96,7 @@
     "eureka": "Build a Quarry",
     "description": "Allows harvesting Stone",
     "id": "masonry",
-    "requires":["masonry"]
+    "requires":["mining"]
   },
   "bronze_working": {
     "name": "Bronze Working",

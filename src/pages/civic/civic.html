@@ -14,5 +14,53 @@
 
 
 <ion-content padding>
+  <div *ngIf="civic" text-wrap>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title style="text-align:center">
+          {{civic.name}}
+        </ion-card-title>
+        <img class="large-icon" src="./assets/images/civics/{{civic.id}}.png"/>
 
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-row>
+            {{civic.description}}
+          </ion-row>
+        </ion-list>
+
+      </ion-card-content>
+    </ion-card>
+    <div *ngIf="civic.requires">
+      <ion-card>
+        <ion-card-header>
+          Required Civics
+        </ion-card-header>
+        <info-card  *ngFor="let req of civic.requires" category="civics" [id]="req">
+        </info-card>
+      </ion-card>
+    </div>
+    <ion-card>
+      {{civic.unlocks}}
+    </ion-card>
+    <ion-card>
+      <ion-list inset>
+        <ion-card-header>
+          <ion-item no-padding>
+            <ion-card-title>
+              Title
+            </ion-card-title>
+            <button ion-button item-end>aljskdf</button>
+          </ion-item>
+        </ion-card-header>
+        <ion-card-content>
+          aklsjdfjaklsjfl ajfklj asdjlfjask;dfjlk;
+          asldfkja;l dsfjlkasfasdf jlkasjkfdlkal;dsjfls
+          aklkfdj;laf sjfljasdfjll aksdfj;lkajslkdf
+          dsflkasd fjjlkjf;klasjdlf jlakjdfs
+        </ion-card-content>
+      </ion-list>
+    </ion-card>
+  </div>
 </ion-content>

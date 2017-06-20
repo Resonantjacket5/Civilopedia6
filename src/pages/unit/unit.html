@@ -15,35 +15,78 @@
 
 <ion-content padding>
   <div *ngIf="unit">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 col-md-6>
+          <ion-card >
+            <ion-card-header>
+              <ion-card-title style="text-align:center">
+                {{unit.name}}
+              </ion-card-title>
+              <img class="portrait" src="./assets/images/unit/{{unit.id}}_portrait.png"/>
+            </ion-card-header>
+            <ion-card-content text-wrap>
+              <ion-list>
+                <ion-row>
+                  <ion-col>
+                    {{unit.description}}
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>Class:</ion-col>
+                  <ion-col>{{unit.class}}</ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>Costs:</ion-col>
+                  <ion-col>{{unit.cost}}</ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>Maintenance cost:</ion-col>
+                  <ion-col>{{unit.maintenance}}</ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>Movement:</ion-col>
+                  <ion-col>{{unit.move}}</ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col>Melee Strength:</ion-col>
+                  <ion-col>{{unit.melee_str}}</ion-col>
+                </ion-row>
+                <div *ngIf="unit.range">
+                  <ion-row>
+                    <ion-col>Ranged Strength:</ion-col>
+                    <ion-col>{{unit.ranged_str}}</ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col>Range:</ion-col>
+                    <ion-col>{{unit.range}}</ion-col>
+                  </ion-row>
+                </div>
+              </ion-list>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col>
 
-    <ion-card >
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-      <ion-card-header>
-        {{unit.name}}
-      </ion-card-header>
-      <ion-card-content>
-        <ion-item>
-          <ion-thumbnail item-end>
-            <img src="./assets/images/unit/{{unit.id}}_portrait.png"/>
-          </ion-thumbnail>
-          <p>
-            {{unit.description}}
-          </p>
-          <p>
-            Type:{{unit.class}}
-          </p>
-          <p>
-            Costs: {{unit.cost}}
-          </p>
-          <p>
-            Movement: {{unit.move}}
-          </p>
-        </ion-item>
-      </ion-card-content>
-    </ion-card>
-    <div *ngIf="unit.requires">
-      <info-card [category]="tecivic" [id]="unit.requires">
-      </info-card>
+
+      <ion-card>
+        <ion-card-header>
+          Required tech
+        </ion-card-header>
+        <div *ngIf="unit.requires">
+          <info-card [category]="tecivic" [id]="unit.requires">
+          </info-card>
+        </div>
+      </ion-card>
+
+    <div *ngIf="unit.required_resource">
+      <ion-card>
+        {{unit.required_resource}}
+      </ion-card>
     </div>
   </div>
 </ion-content>

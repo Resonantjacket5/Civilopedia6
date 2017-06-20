@@ -5,7 +5,15 @@
       "id": "city_center",
       "buildings": [
         "kyle"
-      ]
+      ],
+      "trade_yields":{
+        "domestic":[
+          {"yield":"food","value":1},
+          {"yield":"production","value":1}
+        ],
+        "international":[{"yield":"gold","value":3}]
+      },
+      "description":"City center of the city."
     },
     "campus": {
       "name": "Campus",
@@ -17,15 +25,21 @@
         "research_lab"
       ],
       "type": "science",
+      "citizen_yields":[{"yield":"science","value":2}],
       "adj_yields": {
         "mountain": 1,
         "rainforest": 0.5,
         "district": 0.5
       },
+      "trade_yields":{
+        "domestic":[{"yield":"food","value":1}],
+        "international":[{"yield":"science","value":1}]
+      },
       "requires": {
         "category": "technology",
         "id": "writing"
-      }
+      },
+      "description":"District for scientific endeavors."
     },
     "holy_site": {
       "name": "Holy Site",
@@ -37,51 +51,71 @@
         "stave_church",
         "other_worship"
       ],
+      "citizen_yields":[{"yield":"faith","value":2}],
       "adj_yields": {
         "natural_wonder": 2,
         "mountain": 1,
         "forest": 0.5,
         "district": 0.5
       },
+      "trade_yields":{
+        "domestic":[{"yield":"food","value":1}],
+        "international":[{"yield":"faith","value":1}]
+      },
       "maintenance": 1,
       "requires": {
         "category": "technology",
         "id": "astrology"
-      }
+      },
+      "description":"District for religious worship."
     },
     "theater_square": {
       "name": "Theater Square",
       "id": "theater_square",
       "type": "culture",
+      "citizen_yields":[{"yield":"culture","value":2}],
       "adj_yields": {
         "wonder": 1,
         "district": 0.5
+      },
+      "trade_yields":{
+        "domestic":[{"yield":"food","value":1}],
+        "international":[{"yield":"culture","value":1}]
       },
       "maintenance": 1,
       "requires": {
         "category": "civic",
         "id": "drama_and_poetry"
-      }
+      },
+      "description":"District for cultural sites."
     },
     "harbor": {
       "name": "Harbor",
       "id": "harbor",
       "type": "gold",
+      "citizen_yields":[{"yield":"gold","value":2},{"yield":"science","value":1}],
       "adj_yields": {
         "coastal": 1,
         "district": 0.5,
         "city_center": 2
       },
+      "trade_yields":{
+        "domestic":[{"yield":"production","value":1}],
+        "international":[{"yield":"gold","value":1}]
+      },
       "maintenance": 1,
       "requires": {
         "category": "technology",
         "id": "celestial_navigation"
-      }
+      },
+      "placement":"coastal",
+      "description":"District for naval activity. Also removes movement penalty for embarking and disembarking. +1 Trade route."
     },
     "commercial_hub": {
       "name": "Commercial Hub",
       "id": "commercial_hub",
       "type": "gold",
+      "citizen_yields":[{"yield":"gold","value":4}],
       "adj_yields": {
         "one river": 2,
         "harbor": 2,
@@ -90,7 +124,8 @@
       "requires": {
         "category": "technology",
         "id": "currency"
-      }
+      },
+      "description":"District specializing in finance and trade. +1 trade route"
     },
     "industrial_zone": {
       "name": "Industrial Zone",
@@ -109,38 +144,78 @@
     },
     "encampment": {
       "name": "Encampment",
-      "id": "Encampment",
+      "id": "encampment",
       "type": "military",
       "requires": {
         "category": "technology",
         "id": "bronze_working"
-      }
+      },
+      "citizen_yields":[{"yield":"culture","value":1},{"yield":"production","value":1}],
+      "trade_yields":{
+        "domestic":[{"yield":"production","value":1}],
+        "international":[{"yield":"production","value":1}]
+      },
+      "description":"District for military facilities."
     },
     "entertainment_complex": {
       "name": "Entertainment Complex",
       "id": "entertainment_complex",
       "type": "amenity",
-      "maintenance": 1
+      "maintenance": 1,
+      "description":"District dedicated for keeping your people happy."
     },
     "aqueduct": {
       "name": "Aqueduct",
       "id": "aqueduct",
-      "type": "housing"
+      "type": "housing",
+      "cost":50,
+      "requires":{
+        "category":"technology",
+        "id":"engineering"
+      },
+      "description":"District providing city fresh water. Cities without any water will receive 4 housing, cities with salt water will receive 3 housing, and cities with fresh water will instead receive 2 housing."
     },
     "neighborhood": {
       "name": "Neighborhood",
       "id": "neighborhood",
-      "type": "housing"
+      "type": "housing",
+      "requires":{
+        "category":"technology",
+        "id":"urbanization"
+      },
+      "description":"District that provides housing based on Appeal."
     },
     "aerodrome": {
       "name": "Aerodrome",
       "id": "aerodrome",
-      "type": "air"
+      "type": "air",
+      "maintenance":1,
+      "requires":{
+        "category":"technology",
+        "id":"flight"
+      },
+      "units":[
+        "p51_mustang",
+        "biplane",
+        "bomber",
+        "fighter",
+        "jet_bomber",
+        "jet_fighter"
+      ],
+      "placement":"flat",
+      "description":"District that allows building and storing of aircraft."
     },
     "spaceport": {
       "name": "Spaceport",
       "id": "spaceport",
-      "type": "space"
+      "type": "space",
+      "cost":2000,
+      "requires":{
+        "category":"technology",
+        "id":"rocketry"
+      },
+      "placement":"flat",
+      "description":"District required to construct Science Victory projects."
     }
   },
   "buildings": {
@@ -385,7 +460,7 @@
     "lumber_mill": {
       "name": "Lumber mill",
       "id":"lumber_mill",
-      "requires":"mining",
+      "requires":"machinery",
       "base_yields": [
         {
           "yield": "production",
@@ -394,19 +469,101 @@
       ],
       "bonus_yields": [
         {
-          "category": "technology",
-          "id": "banking",
-          "yield": "gold",
+          "category": "feature",
+          "id": "river",
+          "yield": "production",
           "value": 1
         },
         {
           "category": "technology",
-          "id": "rocketry",
+          "id": "steel",
           "yield": "production",
           "value": 1
         }
       ],
-      "resources":["stone","marble","gypsum"]
+      "features":["wood"]
+    },
+    "fort": {
+      "name": "Fort",
+      "id":"fort",
+      "requires":"siege_tactics",
+      "base_yields": [
+        {
+          "yield": "defense",
+          "value": 4
+        },
+        {
+           "notes":"Units automatically gain 2 turns of fortification"
+        }
+      ],
+      "built_by":["military_engineer","roman_legion"],
+      "terrains":["desert","grassland","plains","snow","tundra"]
+    },
+    "airstrip": {
+      "name": "Airstrip",
+      "id":"airstrip",
+      "requires":"flight",
+      "base_yields": [
+        {
+           "notes":"+3 Aircraft capacity"
+        }
+      ],
+      "built_by":["military_engineer"],
+      "terrains":["flat"]
+    },
+    "seaside_resort": {
+      "name": "Seaside Resort",
+      "id":"seaside_resort",
+      "requires":"radio",
+      "base_yields": [
+        {
+           "notes":"Provides double the tile's Appeal in tourism"
+        },
+        {
+          "notes":"Double tourism from Cristo redentor"
+        },
+        {
+          "notes":"Provides tile's Appeal in gold"
+        }
+      ],
+      "built_by":["military_engineer"],
+      "features":["coastal"]
+    },
+    "oil_well":{
+      "name":"Oil Well",
+      "id":"oil_well",
+      "requires":"combustion",
+      "base_yields":[{
+        "yield":"production",
+        "value":2
+        }
+      ],
+      "resources":["oil"],
+      "terrains":["land"]
+    },
+    "offshore_oil_rig":{
+      "name":"Offshore Oil Rig",
+      "id":"offshore_oil_rig",
+      "requires":"plastics",
+      "base_yields":[{
+        "yield":"production",
+        "value":2
+        }
+      ],
+      "resources":["oil"],
+      "terrains":["sea"]
+    },
+    "missile_silo":{
+      "name":"Missile Silo",
+      "id":"missile_silo",
+      "requires":"rocketry",
+      "base_yields":[{
+        "notes":"+1 Missile Capacity"
+        }
+      ],
+      "build_by":"military_engineer",
+      "resources":["oil"],
+      "terrains":["sea"]
     }
   }
 }

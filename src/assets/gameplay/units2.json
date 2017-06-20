@@ -88,7 +88,8 @@
     "cost": "50",
     "maintenance": "1",
     "name": "Archer",
-    "id": "archer"
+    "id": "archer",
+    "description":"First Ancient era ranged unit with a range of 2."
   },
   "galley": {
     "class": "Naval Melee",
@@ -140,7 +141,7 @@
     "name": "Maryannu Chariot Archer",
     "id": "maryannu_chariot_archer"
   },
-  "warcart": {
+  "war_cart": {
     "class": "Heavy Cavalry",
     "era": "Ancient",
     "move": "4",
@@ -148,8 +149,8 @@
     "cost": "55",
     "maintenance": "0",
     "notes": "Sumerian UU; no penalties vs. anticavalry",
-    "name": "WarCart",
-    "id": "warcart"
+    "name": "War-Cart",
+    "id": "war_cart"
   },
   "spearman": {
     "class": "AntiCavalry",
@@ -736,7 +737,8 @@
     "maintenance": "6",
     "notes": "Can't move and attack",
     "name": "Artillery",
-    "id": "artillery"
+    "id": "artillery",
+    "description":"Modern era bombard unit, ideal for attacking cities. Cannot move and attack same turn."
   },
   "battleship": {
     "class": "Naval Ranged",
@@ -752,7 +754,8 @@
     "required_resource": "Coal",
     "notes": "1 tile air cover",
     "name": "Battleship",
-    "id": "battleship"
+    "id": "battleship",
+    "description":"Modern era naval ranged unit. Provides cover from air and nuclear attacks up to 1 tile away."
   },
   "submarine": {
     "class": "Naval Raider",
@@ -999,7 +1002,8 @@
     "cost": "680",
     "maintenance": "8",
     "name": "Missile Cruiser",
-    "id": "missile_cruiser"
+    "id": "missile_cruiser",
+    "description":"Strongest ranged naval unit, available in the Information Era."
   },
   "modern_armor": {
     "class": "Heavy Cavalry",

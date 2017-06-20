@@ -58,6 +58,12 @@ export class InfoCardComponent {
           this.description = data.description;
         });
         break;
+      case "civics":
+        this.gameData.getCivic(this.id).subscribe((data)=>{
+          this.name = data.name;
+          this.description = data.description;
+        })
+        break;
       case "tecivic":
         let s1 = this.gameData.getCivic(this.id);
         let s2 = this.gameData.getTechnology(this.id);
@@ -116,8 +122,9 @@ export class InfoCardComponent {
       case "technology":
         this.navCtrl.push(TechnologyPage,{"techId":this.id});
         break;
-      case "civic":
+      case "civics":
         console.error("civics page not impleented in info card yet");
+        this.navCtrl.push("civics",{"civicId":this.id});
         break;
       default:
         console.error("category not found for opening page");
