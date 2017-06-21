@@ -45,7 +45,10 @@
           </ion-item-divider>
           <ion-item *ngFor="let y of improvement.base_yields">
             <div *ngIf="y.yield">
-              +{{y.value}} <civ-icon category="yields" [id]=y.yield></civ-icon> {{y.yield}}
+              +{{y.value}} <civ-icon category="yields" [id]=y.yield></civ-icon>{{y.yield}}
+              <div *ngIf="y.adj">
+                for every adjacent {{y.adj.id}}
+              </div>
             </div>
             <div>
               {{y.notes}}
@@ -64,10 +67,10 @@
             <ion-item>
               <ion-row>
                 <ion-col>
-                  +{{y.value}} <civ-icon category="yields" [id]=y.yield></civ-icon> {{y.yield}}
-                </ion-col>
-                <ion-col>
-
+                    +{{y.value}} <civ-icon category="yields" [id]=y.yield></civ-icon> {{y.yield}}
+                    <div *ngIf="y.adj">
+                      for every adjacent {{y.adj.id}}
+                    </div>
                 </ion-col>
               </ion-row>
             </ion-item>
@@ -75,5 +78,12 @@
         </ion-item-group>
       </ion-card-content>
     </ion-card>
+    <div *ngIf="improvement.requires">
+      <ion-card>
+        <info-card category="tecivic" [id]="improvement.requires">
+
+        </info-card>
+      </ion-card>
+    </div>
   </div>
 </ion-content>

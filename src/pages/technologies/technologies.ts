@@ -17,6 +17,8 @@ import { GameDataProvider } from '../../providers/game-data/game-data';
 })
 export class TechnologiesPage {
   technologies:any[];
+  eras:Array<any>=["Ancient","Classical","Medieval","Renaissance","Industrial","Modern","Atomic","Information"];
+  
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,

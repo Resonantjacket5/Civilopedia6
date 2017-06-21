@@ -12,12 +12,12 @@
     </button>
     <ion-title>Technologies</ion-title>
     <ion-buttons end>
-      <button ion-button>
+      <button ion-button menuToggle="right">
         <ion-icon name="funnel"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
-  <ion-toolbar>
+  <!-- <ion-toolbar>
     <ion-buttons>
       <button ion-button>
         era
@@ -26,13 +26,52 @@
         a-z
       </button>
     </ion-buttons>
-  </ion-toolbar>
+  </ion-toolbar> -->
 </ion-header>
 
-<ion-content padding text-wrap>
+<ion-menu [content]="techContent" side="right">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Settings</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list radio-group>
+      <ion-item-divider>
+        Filter Eras
+      </ion-item-divider>
+      <ion-item>
+        <ion-label>Show All</ion-label><ion-radio value="all"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Ancient Era</ion-label><ion-radio value="ancient"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label></ion-label><ion-radio></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label></ion-label><ion-radio></ion-radio>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item-divider>
+        Sort by
+      </ion-item-divider>
+      <ion-item>
+        <ion-label>Cost</ion-label><ion-radio value="none"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Alphabetical</ion-label><ion-radio value="ancient"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
+<ion-content #techContent padding text-wrap>
   <ion-grid>
     <ion-row>
-      <ion-col *ngFor="let tech of technologies" col-12 col-sm-6 col-md-4 col-lg-3>
+      <ion-col *ngFor="let tech of technologies" col-sm>
         <ion-card (click)="openPage(tech.id)">
           <ion-item>
             <ion-thumbnail item-end>

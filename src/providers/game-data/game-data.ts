@@ -52,7 +52,9 @@ export class GameDataProvider {
   public getUnits(): Observable<Array<any>> {
     return this.getJSON("units2.json").map((rawData)=>{
       //convert to array
+
        return Object.keys(rawData).map(key=>rawData[key]);
+       //return rawData;
     });
   }
 

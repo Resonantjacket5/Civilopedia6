@@ -88,7 +88,7 @@ export class InfoCardComponent {
           {
             found = arr[0];
             this.header = "Prerequisite Civic"
-            this.category = "civic";
+            this.category = "civics";
           }
           else
           {
@@ -120,7 +120,7 @@ export class InfoCardComponent {
     switch(this.category)
     {
       case "technology":
-        this.navCtrl.push(TechnologyPage,{"techId":this.id});
+        this.navCtrl.push("technology",{"techId":this.id});
         break;
       case "civics":
         console.error("civics page not impleented in info card yet");

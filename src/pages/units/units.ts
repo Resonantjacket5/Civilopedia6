@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GameDataProvider } from '../../providers/game-data/game-data';
 import { UnitPage } from '../unit/unit';
+
+import { FilterPipe } from '../../pipes/filter/filter';
+
 /**
  * Generated class for the UnitsPage page.
  *
@@ -16,15 +19,24 @@ import { UnitPage } from '../unit/unit';
   templateUrl: 'units.html',
 })
 export class UnitsPage {
-  units:any = [
+  units:Array<any> = [
     { name: "Warrior", description: "Weak ancient era Melee unit"},
     { name: "Slinger", description: "Primitive ranged unit which slings rocks"}
   ];
   units2:any;
 
+  keyGet=Object.keys;
 
+  //eras:Array<any>=["ancient","classical","medieval","renaissance","industrial","modern","atomic","information"]
+  eras:Array<any>=["Ancient","Classical","Medieval","Renaissance","Industrial","Modern","Atomic","Information"];
+  classes:Array<any>=["Civilian","Recon","Melee","Ranged","Anti-Cavalry",
+  "Light Cavalry","Heavy Cavalry","Siege","Naval Melee","Naval Ranged",
+  "Naval Raider","Naval Carrier"];
 
+  filterent:Array<any>;
+  prop:string;
 
+  selected:string="unsort";
 
   constructor(
     public navCtrl: NavController,
@@ -43,11 +55,21 @@ export class UnitsPage {
       console.log(data2);
       this.units = data2;
     });
+  }
 
+  stuff(){
+    //this.units.filter();
+  }
 
-    // subscribe( (data) =>{
-    //   this.units = Object.keys(data.units).map(key=>data.units[key]);
-    // });
+  changeFilter(){
+    console.log(this.selected);
+    if(this.selected==="era"){
+      this.filterent = this.eras;
+    }
+    else {
+      this.filterent = this.classes;
+    }
+    this.prop = this.selected;
   }
 
   openPage(id:string):void

@@ -6,55 +6,72 @@
 -->
 <ion-header>
   <ion-navbar>
+
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Units</ion-title>
+    <button ion-button menuToggle="right" end>
+      <ion-icon name="funnel"></ion-icon>
+    </button>
+
   </ion-navbar>
 </ion-header>
 
+<ion-menu [content]="unitContent" side="right">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Unit Sort</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list radio-group (ionChange)="changeFilter()" [(ngModel)]="selected">
+      <ion-item>
+        <ion-label>Unsorted</ion-label><ion-radio value="unsort"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Era</ion-label><ion-radio value="era"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Class</ion-label><ion-radio value="class"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>(Under construction) Alphabetical</ion-label><ion-radio value="alpha"></ion-radio>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
 
-<ion-content padding>
-  <!-- <ion-list>
-    <ion-item *ngFor="let unit of units">
-      <img src="./assets/images/{{unit.id}}_portrait.png" />
-      <h2>
-        {{unit.name}}
-      </h2>
-      <p>
-        {{unit.description}}
-      </p>
-    </ion-item>
-  </ion-list> -->
-  <!-- <ion-grid>
+<ion-content #unitContent padding>
+  <ion-list *ngIf="!(selected==='unsort')">
+    <div *ngFor="let f of filterent">
+      <ion-card>
+        <ion-item>
+          <ion-title style="">
+            {{f}}
+          </ion-title>
+        </ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col *ngFor="let unit of units|filter:prop:f">
+              <ion-card (click)="openPage(unit.id)" style="max-width:300px">
+                <ion-item text-wrap>
+                  <h2>{{unit.name}}</h2>
+                  <p>{{unit.description}}</p>
+                  <ion-thumbnail item-end>
+                    <img src="./assets/images/unit/{{unit.id}}_portrait.png" />
+                  </ion-thumbnail>
+                </ion-item>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </div>
+  </ion-list>
+  <ion-grid *ngIf="selected==='unsort'">
     <ion-row>
-      <ion-col *ngFor="let unit of units" col-sm>
-        <ion-card>
-          <ion-item>
-            {{unit.name}}
-          </ion-item>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid> -->
-
-
-  <ion-card *ngFor="let unit of units" (click)="openPage(unit.id)">
-    <ion-item text-wrap>
-      <h2>
-        {{unit.name}}
-      </h2>
-      <p>
-        {{unit.description}}
-      </p>
-      <ion-thumbnail item-end>
-        <img src="./assets/images/unit/{{unit.id}}_portrait.png" />
-      </ion-thumbnail>
-    </ion-item>
-  </ion-card>
-  <ion-grid>
-    <ion-row>
-      <ion-col *ngFor="let unit of units">
+      <ion-col *ngFor="let unit of units" col-xl-3>
         <ion-card (click)="openPage(unit.id)">
           <ion-item text-wrap>
             <h2>
@@ -71,6 +88,4 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-
-
 </ion-content>

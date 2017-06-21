@@ -66,7 +66,7 @@
     "id": "settler"
   },
   "trader": {
-    "class": "Trade",
+    "class": "Civilian",
     "era": "Ancient",
     "requires": "foreign_trade",
     "move": "2",
@@ -128,15 +128,15 @@
     "id": "heavy_chariot"
   },
   "maryannu_chariot_archer": {
-    "class": "Cavalry",
+    "class": "Ranged",
     "era": "Ancient",
     "requires": "wheel",
-    "move": "4",
-    "melee_str": "23",
-    "ranged_str": "33",
-    "range": "2",
-    "cost": "140",
-    "maintenance": "2",
+    "move": 4,
+    "melee_str": 23,
+    "ranged_str": 33,
+    "range": 2,
+    "cost": 140,
+    "maintenance": 2,
     "notes": "Egyptian UU",
     "name": "Maryannu Chariot Archer",
     "id": "maryannu_chariot_archer"
@@ -153,7 +153,7 @@
     "id": "war_cart"
   },
   "spearman": {
-    "class": "AntiCavalry",
+    "class": "Anti-Cavalry",
     "era": "Ancient",
     "requires": "bronze_working",
     "move": "2",
@@ -165,7 +165,7 @@
     "id": "spearman"
   },
   "hoplite": {
-    "class": "Spear",
+    "class": "Anti-Cavalry",
     "era": "Ancient",
     "requires": "bronze_working",
     "move": "2",
@@ -226,7 +226,7 @@
     "id": "horseman"
   },
   "varu": {
-    "class": "Cavalry",
+    "class": "Heavy Cavalry",
     "era": "Classical",
     "requires": "horseback_riding",
     "move": "2",
@@ -330,6 +330,7 @@
     "melee_str": "110†",
     "cost": "125¹",
     "maintenance": "0",
+    "description":"May convert Citizens to their Religion and initiate theological combat with units of other Religions.",
     "notes": "2 Spread Religion, Evangelize Belief, Launch Inquisition",
     "name": "Apostle",
     "id": "apostle"
@@ -355,7 +356,7 @@
     "id": "great_person"
   },
   "pikeman": {
-    "class": "AntiCavalry",
+    "class": "Anti-Cavalry",
     "era": "Medieval",
     "requires": "military_tactics",
     "move": "2",
@@ -786,7 +787,7 @@
     "id": "uboat"
   },
   "at_crew": {
-    "class": "AntiCavalry",
+    "class": "Anti-Cavalry",
     "era": "Modern",
     "requires": "chemistry",
     "move": "2",
@@ -870,7 +871,7 @@
     "cost": "455",
     "maintenance": "5",
     "notes": "1 tile air cover",
-    "name": "AntiAir Gun",
+    "name": "Anti-Air Gun",
     "id": "antiair_gun"
   },
   "machine_gun": {
@@ -1018,7 +1019,7 @@
     "id": "modern_armor"
   },
   "modern_at": {
-    "class": "AntiCavalry",
+    "class": "Anti-Cavalry",
     "era": "Information",
     "requires": "composites",
     "move": "2",

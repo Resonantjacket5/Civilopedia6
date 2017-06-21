@@ -56,4 +56,9 @@ export class MyApp {
     this.nav.setRoot(page.component);
     console.log(page);
   }
+
+
+  setSettingsMenu(settings:Array<any>){
+
+  }
 }

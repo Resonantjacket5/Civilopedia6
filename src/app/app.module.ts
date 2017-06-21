@@ -27,13 +27,14 @@ import { InfoCardComponent } from '../components/info-card/info-card';
 import { GameDataProvider } from '../providers/game-data/game-data';
 import { TestComponent } from '../components/test/test';
 import { CivIconComponent } from '../components/civ-icon/civ-icon';
+import { FilterPipe } from '../pipes/filter/filter';
 
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    /*
+    /*FilterPipe,
     UnitsPage,
     UnitPage,
     TechnologiesPage,
@@ -69,7 +70,7 @@ import { CivIconComponent } from '../components/civ-icon/civ-icon';
     MyApp,
     HomePage,
     /*UnitsPage,
-    UnitPage,
+    /*UnitPage,
     TechnologiesPage,
     TechnologyPage,
     BuildingPage,

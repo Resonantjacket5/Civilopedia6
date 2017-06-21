@@ -15,17 +15,24 @@
 
 
 <ion-content padding>
-  <ion-card *ngFor="let district of districts" (click)="openPage(district.id)">
-    <ion-item>
-      <h2>
-        {{district.name}}
-      </h2>
-      <p>
-        {{district.description}}
-      </p>
-      <ion-thumbnail item-end>
-        <img src="./assets/images/districts/{{district.id}}.png" />
-      </ion-thumbnail>
-    </ion-item>
-  </ion-card>
+  <ion-grid>
+    <!-- col-sm-6 col-lg-4 col-xl-3 -->
+    <ion-row>
+      <ion-col *ngFor="let district of districts" col-lg-4 col-xl-auto>
+        <ion-card  (click)="openPage(district.id)" text-wrap>
+          <ion-item>
+            <h2>
+              {{district.name}}
+            </h2>
+            <p>
+              {{district.description}}
+            </p>
+            <ion-thumbnail item-end>
+              <img src="./assets/images/districts/{{district.id}}.png" />
+            </ion-thumbnail>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
