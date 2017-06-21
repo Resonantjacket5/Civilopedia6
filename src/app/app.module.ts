@@ -50,7 +50,7 @@ import { FilterPipe } from '../pipes/filter/filter';
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp
-      //, {locationStrategy: 'hash'}
+      // , {locationStrategy: 'hash'}
     //, {
     //   links:[
     //

@@ -3,6 +3,8 @@ import { Http } from '@angular/http';
 import { Platform } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/observable/merge';
+
 /*
   Generated class for the GameDataProvider provider.
 
@@ -17,6 +19,12 @@ export class GameDataProvider {
     public platform: Platform
   ) {
     console.log('Hello GameDataProvider Provider');
+
+    //let platforms:Array<string> = ['android','cordova','core','ios','ipad','iphone','mobile','mobileweb','phablet','tablet','windows'];
+    //for (let plat of platforms)
+    //{
+    //  console.log(this.platform.is(plat));
+    //}
   }
 
   public getTechnology(techId:string):Observable<any>{
@@ -91,6 +99,7 @@ export class GameDataProvider {
   }
 
   public getJSON(fileName:string): Observable<any> {
+
     if(this.platform.is('android'))
     {
       console.log("is android");
@@ -100,10 +109,22 @@ export class GameDataProvider {
     else
     {
       console.log("is not android");
-      return this.http.get("../../assets/gameplay/"+fileName)
-      .map((res:any) => res.json());
-    }
 
+      // local development
+      const localFetch = this.http.get("../../assets/gameplay/"+fileName)
+      .map((res:any) => res.json());
+
+      return localFetch;
+      /*
+      // github pages fetch
+      const githubPageFetch = this.http.get("../../Civilopedia6/assets/gameplay/"+fileName)
+      .map((res:any) => res.json());
+
+
+      // pretty janky should remove for
+      return Observable.merge(localFetch, githubPageFetch);
+      */
+    }
     //.catch((err:any) => Observable.throw(err.json().error));
   }
 

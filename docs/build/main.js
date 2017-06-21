@@ -76799,7 +76799,7 @@ AppModule = __decorate([
                     { loadChildren: '../pages/improvements/improvements.module#ImprovementsPageModule', name: 'improvements', segment: 'improvements', priority: 'low', defaultHistory: [] }
                 ]
             }
-            //, {locationStrategy: 'hash'}
+            // , {locationStrategy: 'hash'}
             //, {
             //   links:[
             //
@@ -77028,6 +77028,8 @@ var platformBrowserDynamic = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(241);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_merge__ = __webpack_require__(293);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_merge___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_merge__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GameDataProvider; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -77038,6 +77040,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -77053,6 +77056,11 @@ var GameDataProvider = (function () {
         this.http = http;
         this.platform = platform;
         console.log('Hello GameDataProvider Provider');
+        //let platforms:Array<string> = ['android','cordova','core','ios','ipad','iphone','mobile','mobileweb','phablet','tablet','windows'];
+        //for (let plat of platforms)
+        //{
+        //  console.log(this.platform.is(plat));
+        //}
     }
     GameDataProvider.prototype.getTechnology = function (techId) {
         return this.getJSON("technologies2.json").map(function (techs) {
@@ -77121,8 +77129,19 @@ var GameDataProvider = (function () {
         }
         else {
             console.log("is not android");
-            return this.http.get("../../assets/gameplay/" + fileName)
+            // local development
+            var localFetch = this.http.get("../../assets/gameplay/" + fileName)
                 .map(function (res) { return res.json(); });
+            return localFetch;
+            /*
+            // github pages fetch
+            const githubPageFetch = this.http.get("../../Civilopedia6/assets/gameplay/"+fileName)
+            .map((res:any) => res.json());
+      
+      
+            // pretty janky should remove for
+            return Observable.merge(localFetch, githubPageFetch);
+            */
         }
         //.catch((err:any) => Observable.throw(err.json().error));
     };
@@ -77133,10 +77152,10 @@ var GameDataProvider = (function () {
 }());
 GameDataProvider = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */],
-        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* Platform */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* Platform */]) === "function" && _b || Object])
 ], GameDataProvider);
 
+var _a, _b;
 //# sourceMappingURL=game-data.js.map
 
 /***/ }),
@@ -114496,6 +114515,47 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
 //# sourceMappingURL=main.js.map
+
+/***/ }),
+/* 263 */,
+/* 264 */,
+/* 265 */,
+/* 266 */,
+/* 267 */,
+/* 268 */,
+/* 269 */,
+/* 270 */,
+/* 271 */,
+/* 272 */,
+/* 273 */,
+/* 274 */,
+/* 275 */,
+/* 276 */,
+/* 277 */,
+/* 278 */,
+/* 279 */,
+/* 280 */,
+/* 281 */,
+/* 282 */,
+/* 283 */,
+/* 284 */,
+/* 285 */,
+/* 286 */,
+/* 287 */,
+/* 288 */,
+/* 289 */,
+/* 290 */,
+/* 291 */,
+/* 292 */,
+/* 293 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var Observable_1 = __webpack_require__(9);
+var merge_1 = __webpack_require__(251);
+Observable_1.Observable.merge = merge_1.merge;
+//# sourceMappingURL=merge.js.map
 
 /***/ })
 /******/ ]);
