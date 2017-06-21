@@ -77127,8 +77127,12 @@ var GameDataProvider = (function () {
     GameDataProvider.prototype.getJSON = function (fileName) {
         if (this.platform.is('android')) {
             console.log("is android");
-            return this.http.get("../www/assets/gameplay/" + fileName)
+            var androidFetch = this.http.get("../www/assets/gameplay/" + fileName)
                 .map(function (res) { return res.json(); });
+            // github pages fetch
+            var githubPageFetch = this.http.get("../../Civilopedia6/assets/gameplay/" + fileName)
+                .map(function (res) { return res.json(); });
+            return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].merge(androidFetch, githubPageFetch);
         }
         else {
             console.log("is not android");

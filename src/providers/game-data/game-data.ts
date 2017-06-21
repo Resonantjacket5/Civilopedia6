@@ -103,8 +103,16 @@ export class GameDataProvider {
     if(this.platform.is('android'))
     {
       console.log("is android");
-      return this.http.get("../www/assets/gameplay/"+fileName)
+      let androidFetch = this.http.get("../www/assets/gameplay/"+fileName)
       .map((res:any) => res.json());
+
+
+      // github pages fetch
+      let githubPageFetch = this.http.get("../../Civilopedia6/assets/gameplay/"+fileName)
+      .map((res:any) => res.json());
+
+      return Observable.merge(androidFetch, githubPageFetch);
+
     }
     else
     {
