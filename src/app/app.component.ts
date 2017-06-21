@@ -27,7 +27,7 @@ export class MyApp {
     // { title: 'Districts', component: DistrictsPage },
     // { title: 'Civics', component: "civics"}
     { title: 'Home', component: HomePage },
-    { title: 'Units', component: "units" },
+    { title: 'Units x', component: "units" },
     { title: 'Technologies', component: "technologies" },
     { title: 'Civics', component: "civics"},
     { title: 'Districts', component: "districts" },

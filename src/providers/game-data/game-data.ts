@@ -111,13 +111,13 @@ export class GameDataProvider {
       console.log("is not android");
 
       // local development
-      const localFetch = this.http.get("../../assets/gameplay/"+fileName)
+      let localFetch = this.http.get("../../assets/gameplay/"+fileName)
       .map((res:any) => res.json());
 
       //return localFetch;
 
       // github pages fetch
-      const githubPageFetch = this.http.get("../../Civilopedia6/assets/gameplay/"+fileName)
+      let githubPageFetch = this.http.get("../../Civilopedia6/assets/gameplay/"+fileName)
       .map((res:any) => res.json());
 
 
