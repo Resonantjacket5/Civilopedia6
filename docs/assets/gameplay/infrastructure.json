@@ -1,0 +1,1013 @@
+{
+  "districts": {
+    "city_center": {
+      "name": "City Center",
+      "id": "city_center",
+      "buildings": [
+        "kyle"
+      ],
+      "trade_yields":{
+        "domestic":[
+          {"yield":"food","value":1},
+          {"yield":"production","value":1}
+        ],
+        "international":[{"yield":"gold","value":3}]
+      },
+      "description":"City center of the city."
+    },
+    "campus": {
+      "name": "Campus",
+      "id": "campus",
+      "buildings": [
+        "library",
+        "university",
+        "madrasa",
+        "research_lab"
+      ],
+      "type": "science",
+      "citizen_yields":[{"yield":"science","value":2}],
+      "adj_yields": {
+        "mountain": 1,
+        "rainforest": 0.5,
+        "district": 0.5
+      },
+      "trade_yields":{
+        "domestic":[{"yield":"food","value":1}],
+        "international":[{"yield":"science","value":1}]
+      },
+      "requires": {
+        "category": "technology",
+        "id": "writing"
+      },
+      "description":"District for scientific endeavors."
+    },
+    "holy_site": {
+      "name": "Holy Site",
+      "id": "holy_site",
+      "type": "faith",
+      "buildings": [
+        "shrine",
+        "temple",
+        "stave_church",
+        "other_worship"
+      ],
+      "citizen_yields":[{"yield":"faith","value":2}],
+      "adj_yields": {
+        "natural_wonder": 2,
+        "mountain": 1,
+        "woods": 0.5,
+        "district": 0.5
+      },
+      "trade_yields":{
+        "domestic":[{"yield":"food","value":1}],
+        "international":[{"yield":"faith","value":1}]
+      },
+      "maintenance": 1,
+      "requires": {
+        "category": "technology",
+        "id": "astrology"
+      },
+      "description":"District for religious worship."
+    },
+    "theater_square": {
+      "name": "Theater Square",
+      "id": "theater_square",
+      "type": "culture",
+      "citizen_yields":[{"yield":"culture","value":2}],
+      "adj_yields": {
+        "wonder": 1,
+        "district": 0.5
+      },
+      "trade_yields":{
+        "domestic":[{"yield":"food","value":1}],
+        "international":[{"yield":"culture","value":1}]
+      },
+      "maintenance": 1,
+      "requires": {
+        "category": "civic",
+        "id": "drama_and_poetry"
+      },
+      "description":"District for cultural sites."
+    },
+    "harbor": {
+      "name": "Harbor",
+      "id": "harbor",
+      "type": "gold",
+      "citizen_yields":[{"yield":"gold","value":2},{"yield":"science","value":1}],
+      "adj_yields": {
+        "coastal": 1,
+        "district": 0.5,
+        "city_center": 2
+      },
+      "trade_yields":{
+        "domestic":[{"yield":"production","value":1}],
+        "international":[{"yield":"gold","value":1}]
+      },
+      "maintenance": 1,
+      "requires": {
+        "category": "technology",
+        "id": "celestial_navigation"
+      },
+      "placement":"coastal",
+      "description":"District for naval activity. Also removes movement penalty for embarking and disembarking. +1 Trade route."
+    },
+    "commercial_hub": {
+      "name": "Commercial Hub",
+      "id": "commercial_hub",
+      "type": "gold",
+      "citizen_yields":[{"yield":"gold","value":4}],
+      "adj_yields": {
+        "one river": 2,
+        "harbor": 2,
+        "district": 0.5
+      },
+      "requires": {
+        "category": "technology",
+        "id": "currency"
+      },
+      "description":"District specializing in finance and trade. +1 trade route"
+    },
+    "industrial_zone": {
+      "name": "Industrial Zone",
+      "id": "industrial_zone",
+      "type": "production",
+      "adj_yields": {
+        "mine": 1,
+        "quarry": 1,
+        "district": 0.5
+      },
+      "maintenance": 1,
+      "requires": {
+        "category": "technology",
+        "id": "apprenticeship"
+      }
+    },
+    "encampment": {
+      "name": "Encampment",
+      "id": "encampment",
+      "type": "military",
+      "requires": {
+        "category": "technology",
+        "id": "bronze_working"
+      },
+      "citizen_yields":[{"yield":"culture","value":1},{"yield":"production","value":1}],
+      "trade_yields":{
+        "domestic":[{"yield":"production","value":1}],
+        "international":[{"yield":"production","value":1}]
+      },
+      "description":"District for military facilities."
+    },
+    "entertainment_complex": {
+      "name": "Entertainment Complex",
+      "id": "entertainment_complex",
+      "type": "amenity",
+      "maintenance": 1,
+      "description":"District dedicated for keeping your people happy."
+    },
+    "aqueduct": {
+      "name": "Aqueduct",
+      "id": "aqueduct",
+      "type": "housing",
+      "cost":50,
+      "requires":{
+        "category":"technology",
+        "id":"engineering"
+      },
+      "description":"District providing city fresh water. Cities without any water will receive 4 housing, cities with salt water will receive 3 housing, and cities with fresh water will instead receive 2 housing."
+    },
+    "neighborhood": {
+      "name": "Neighborhood",
+      "id": "neighborhood",
+      "type": "housing",
+      "requires":{
+        "category":"technology",
+        "id":"urbanization"
+      },
+      "description":"District that provides housing based on Appeal."
+    },
+    "aerodrome": {
+      "name": "Aerodrome",
+      "id": "aerodrome",
+      "type": "air",
+      "maintenance":1,
+      "requires":{
+        "category":"technology",
+        "id":"flight"
+      },
+      "units":[
+        "p51_mustang",
+        "biplane",
+        "bomber",
+        "fighter",
+        "jet_bomber",
+        "jet_fighter"
+      ],
+      "placement":"flat",
+      "description":"District that allows building and storing of aircraft."
+    },
+    "spaceport": {
+      "name": "Spaceport",
+      "id": "spaceport",
+      "type": "space",
+      "cost":2000,
+      "requires":{
+        "category":"technology",
+        "id":"rocketry"
+      },
+      "placement":"flat",
+      "description":"District required to construct Science Victory projects."
+    }
+  },
+  "buildings": {
+    "granary": {
+      "district": "city_center",
+      "yields": [
+        "+1 food",
+        "+2 housing"
+      ]
+    },
+    "monument": {
+      "district": "city_center"
+    },
+    "water_mill": {
+      "district": "city_center"
+    },
+    "ancient_walls": {
+      "district": "city_center"
+    },
+    "medieval_walls": {
+      "district": "city_center"
+    },
+    "library": {
+      "district": "campus"
+    }
+  },
+  "improvements": {
+    "farm": {
+      "name": "Farm",
+      "terrains": [
+        "grassland",
+        "plains"
+      ],
+      "resources": [
+        "wheat",
+        "rice"
+      ],
+      "base_yields": [
+        {
+          "yield": "food",
+          "value": 1
+        },
+        {
+          "yield": "housing",
+          "value": 0.5
+        }
+      ],
+      "bonus_yields": [
+        {
+          "category": "technology",
+          "id": "feudalism",
+          "yield": "food",
+          "value": 1,
+          "adj":{
+            "category":"improvements",
+            "id":"farm"
+          }
+        },
+        {
+          "category": "technology",
+          "id": "replaceable_parts",
+          "yield": "food",
+          "value": 1,
+          "adj":{
+            "category":"improvements",
+            "id":"farm"
+          }
+        }
+      ],
+      "id": "farm"
+    },
+    "pasture": {
+      "name": "Pasture",
+      "id":"pasture",
+      "requires":"animal_husbandry",
+      "base_yields": [
+        {
+          "yield": "production",
+          "value": 1
+        },
+        {
+          "yield": "housing",
+          "value": 0.5
+        }
+      ],
+      "bonus_yields": [
+        {
+          "category": "technology",
+          "id": "exploration",
+          "yield": "food",
+          "value": 1
+        },
+        {
+          "category": "technology",
+          "id": "robotics",
+          "yield": "production",
+          "value": 1
+        }
+      ],
+      "resources":[
+        "sheep","horses","cattle"
+      ]
+    },
+    "plantation": {
+      "name": "Plantation",
+      "id":"plantation",
+      "requires":"irrigation",
+      "base_yields": [
+        {
+          "yield": "gold",
+          "value": 1
+        },
+        {
+          "yield": "housing",
+          "value": 0.5
+        }
+      ],
+      "bonus_yields": [
+        {
+          "category": "technology",
+          "id": "scientific_theory",
+          "yield": "food",
+          "value": 1
+        },
+        {
+          "category": "technology",
+          "id": "globalization",
+          "yield": "gold",
+          "value": 1
+        }
+      ],
+      "resources":[
+        "bananas","citrus","cocoa","coffee","cotton","dyes",
+        "silk","sugar","tea","tobacco","wine"
+      ]
+    },
+    "camp": {
+      "name": "Camp",
+      "id":"camp",
+      "requires":"animal_husbandry",
+      "base_yields": [
+        {
+          "yield": "gold",
+          "value": 1
+        },
+        {
+          "yield": "housing",
+          "value": 0.5
+        }
+      ],
+      "bonus_yields": [
+        {
+          "category": "technology",
+          "id": "mercantilism",
+          "yield": "gold",
+          "value": 1
+        },
+        {
+          "category": "technology",
+          "id": "synthetic_materials",
+          "yield": "gold",
+          "value": 1
+        }
+      ],
+      "resources":["deer","fur","ivory","truffles"]
+    },
+    "fishing_boats": {
+      "name": "Fishing boats",
+      "id":"fishing_boats",
+      "requires":"sailing",
+      "base_yields": [
+        {
+          "yield": "food",
+          "value": 1
+        },
+        {
+          "yield": "housing",
+          "value": 0.5
+        }
+      ],
+      "bonus_yields": [
+        {
+          "category": "technology",
+          "id": "cartography",
+          "yield": "gold",
+          "value": 1
+        },
+        {
+          "category": "technology",
+          "id": "plastics",
+          "yield": "food",
+          "value": 1
+        }
+      ],
+      "resources":["fish","crab","whales","pearls"]
+    },
+    "mine": {
+      "name": "Mine",
+      "id":"mine",
+      "requires":"mining",
+      "base_yields": [
+        {
+          "yield": "production",
+          "value": 1
+        }
+      ],
+      "bonus_yields": [
+        {
+          "category": "technology",
+          "id": "apprenticeship",
+          "yield": "production",
+          "value": 1
+        },
+        {
+          "category": "technology",
+          "id": "Industrialization",
+          "yield": "production",
+          "value": 1
+        }
+      ],
+      "terrains":["hills"],
+      "resources":["copper","diamond","iron","mercury","niter","coal","aluminum","uranium"]
+    },
+    "quarry": {
+      "name": "Quarry",
+      "id":"quarry",
+      "requires":"mining",
+      "base_yields": [
+        {
+          "yield": "production",
+          "value": 1
+        }
+      ],
+      "bonus_yields": [
+        {
+          "category": "technology",
+          "id": "banking",
+          "yield": "gold",
+          "value": 1
+        },
+        {
+          "category": "technology",
+          "id": "rocketry",
+          "yield": "production",
+          "value": 1
+        }
+      ],
+      "resources":["stone","marble","gypsum"]
+    },
+    "lumber_mill": {
+      "name": "Lumber mill",
+      "id":"lumber_mill",
+      "requires":"machinery",
+      "base_yields": [
+        {
+          "yield": "production",
+          "value": 1
+        }
+      ],
+      "bonus_yields": [
+        {
+          "category": "feature",
+          "id": "river",
+          "yield": "production",
+          "value": 1
+        },
+        {
+          "category": "technology",
+          "id": "steel",
+          "yield": "production",
+          "value": 1
+        }
+      ],
+      "features":["wood"]
+    },
+    "fort": {
+      "name": "Fort",
+      "id":"fort",
+      "requires":"siege_tactics",
+      "base_yields": [
+        {
+          "yield": "defense",
+          "value": 4
+        },
+        {
+           "notes":"Units automatically gain 2 turns of fortification"
+        }
+      ],
+      "built_by":"military_engineer",
+      "terrains":["desert","grassland","plains","snow","tundra"]
+    },
+    "airstrip": {
+      "name": "Airstrip",
+      "id":"airstrip",
+      "requires":"flight",
+      "base_yields": [
+        {
+           "notes":"+3 Aircraft capacity"
+        }
+      ],
+      "built_by":"military_engineer",
+      "terrains":["flat"]
+    },
+    "seaside_resort": {
+      "name": "Seaside Resort",
+      "id":"seaside_resort",
+      "requires":"radio",
+      "base_yields": [
+        {
+           "notes":"Provides double the tile's Appeal in tourism"
+        },
+        {
+          "notes":"Double tourism from Cristo redentor"
+        },
+        {
+          "notes":"Provides tile's Appeal in gold"
+        }
+      ],
+      "features":["coastal"]
+    },
+    "oil_well":{
+      "name":"Oil Well",
+      "id":"oil_well",
+      "requires":"combustion",
+      "base_yields":[{
+        "yield":"production",
+        "value":2
+        }
+      ],
+      "resources":["oil"],
+      "terrains":["land"]
+    },
+    "offshore_oil_rig":{
+      "name":"Offshore Oil Rig",
+      "id":"offshore_oil_rig",
+      "requires":"plastics",
+      "base_yields":[{
+        "yield":"production",
+        "value":2
+        }
+      ],
+      "resources":["oil"],
+      "terrains":["sea"]
+    },
+    "missile_silo":{
+      "name":"Missile Silo",
+      "id":"missile_silo",
+      "requires":"rocketry",
+      "base_yields":[{
+        "notes":"+1 Missile Capacity"
+        }
+      ],
+      "build_by":"military_engineer",
+      "resources":["oil"],
+      "terrains":["sea"]
+    },
+    "alcázar":{
+      "name":"Alcázar",
+      "id":"alcázar",
+      "unique":{
+        "category":"city_states",
+        "id":"granada"
+      },
+      "placement":{
+        "adj":{
+          "category":"features",
+          "id":"river"
+        }
+      },
+      "base_yields":
+      [
+        {
+          "yield":"culture",
+          "value":2
+        },
+        {
+          "yield": "defense",
+          "value": 4
+        },
+        {
+           "notes":"Units automatically gain 2 turns of fortification"
+        }
+      ]
+    },
+    "chateau":{
+      "name":"Chateau",
+      "id":"chateau",
+      "unique":{
+        "category":"civilizations",
+        "id":"france"
+      },
+      "base_yields":
+      [
+        {
+          "yield":"culture",
+          "value":1
+        },
+        {
+          "yield":"culture",
+          "value":1,
+          "adj":{
+            "category":"wonders",
+            "id":"wonders (change)"
+          }
+        },
+        {
+          "yield":"appeal",
+          "value":1
+        },
+        {
+          "yield": "gold",
+          "value": 1,
+          "notes":"adjacent to luxury"
+        }
+      ]
+    },
+    "colossal_heads":{
+      "name":"Colossal Heads",
+      "id":"colossal_heads",
+      "unique":{
+        "category":"city_states",
+        "id":"la_venta"
+      },
+      "base_yields":
+      [
+        {
+          "yield":"faith",
+          "value":2
+        },
+        {
+          "yield":"faith",
+          "value":0.5,
+          "adj":{
+            "category":"features",
+            "id":"woods"
+          }
+        },
+        {
+          "yield":"faith",
+          "value":0.5,
+          "adj":{
+            "category":"features",
+            "id":"rainforest"
+          }
+        }
+      ],
+      "bonus_yields": [
+        {
+          "category": "feature",
+          "id": "river",
+          "yield": "production",
+          "value": 1
+        },
+        {
+          "category": "technology",
+          "id": "steel",
+          "yield": "production",
+          "value": 1
+        }
+      ]
+    },
+    "great_wall":{
+      "name":"Great Wall",
+      "id":"great_wall",
+      "requires":"masonry",
+      "unique":{
+        "category":"civilizations",
+        "id":"china"
+      },
+      "base_yields":
+      [
+        {
+          "yield":"defense",
+          "value":4
+        }
+      ],
+      "bonus_yields":
+      [
+        {
+          "category":"technology",
+          "id":"masonry",
+          "yield":"gold",
+          "value":1,
+          "adj":{
+            "category":"improvements",
+            "id":"great_wall"
+          }
+        },
+        {
+          "category":"technology",
+          "id":"castles",
+          "yield":"culture",
+          "value":1,
+          "adj":{
+            "category":"improvements",
+            "id":"great_wall"
+          }
+        }
+      ],
+      "description":"Unique improvement of China. Cannot enclose any tile."
+    },
+    "kurgan":{
+      "name":"Kurgan",
+      "id":"kurgan",
+      "requires":"animal_husbandry",
+      "unique":{
+        "category":"civilizations",
+        "id":"synthia"
+      },
+      "base_yields":
+      [
+        {
+          "yield":"faith",
+          "value":1
+        },
+        {
+          "yield":"faith",
+          "value":1,
+          "adj":{
+            "category":"improvements",
+            "id":"pasture"
+          }
+        },
+        {
+          "yield":"gold",
+          "value":1
+        }
+      ],
+      "bonus_yields":[
+        {
+          "category":"civics",
+          "id":"guilds",
+          "yield":"gold",
+          "value":1
+        },
+        {
+          "category":"civics",
+          "id":"capitalism",
+          "yield":"gold",
+          "value":1
+        }
+      ]
+    },
+    "mission":{
+      "name":"Mission",
+      "id":"mission",
+      "requires":"exploration",
+      "unique":{
+        "category":"civilizations",
+        "id":"spain"
+      },
+      "base_yields":
+      [
+        {
+          "yield":"faith",
+          "value":1
+        },
+        {
+          "yield":"faith",
+          "value":1,
+          "notes":"different continent"
+        },
+        {
+          "yield":"science",
+          "value":1,
+          "adj":{
+            "category":"districts",
+            "id":"city_center"
+          }
+        }
+      ],
+      "bonus_yields":[
+        {
+          "category":"civics",
+          "id":"cultural_heritage",
+          "yield":"science",
+          "value":2
+        }
+      ]
+    },
+    "monastery":{
+      "name":"Monastery",
+      "id":"monastery",
+      "unique":{
+        "category":"city_states",
+        "id":"armagh"
+      },
+      "base_yields":
+      [
+        {
+          "yield":"faith",
+          "value":2
+        },
+        { "notes": "+15 HP healing for friendly religious unit (has not attacked)."}
+      ]
+    },
+    "outback_station":{
+      "name":"Outback Station",
+      "id":"outback_station",
+      "requires":"guilds",
+      "unique":{
+        "category":"civilizations",
+        "id":"australia"
+      },
+      "base_yields":
+      [
+        {
+          "yield":"food",
+          "value":1
+        },
+        {
+          "yield":"production",
+          "value":1
+        },
+        {
+          "yield":"housing",
+          "value":0.5
+        },
+        {
+          "yield":"food",
+          "value":1,
+          "adj":{
+            "category":"improvements",
+            "id":"out_back_station"
+          }
+        }
+      ],
+      "bonus_yields":[
+        {
+          "category":"technology",
+          "id":"rapid_deployment",
+          "yield":"production",
+          "value":0.5,
+          "adj":{
+            "category":"improvements",
+            "id":"out_back_station"
+          }
+        }
+      ]
+    },
+    "pairidaeza":{
+      "name":"Pairidaeza",
+      "id":"pairidaeza",
+      "requires":"early_empire",
+      "unique":{
+        "category":"civilizations",
+        "id":"persia"
+      },
+      "base_yields":
+      [
+        {
+          "yield":"culture",
+          "value":1
+        },
+        {
+          "yield":"gold",
+          "value":1
+        },
+        {
+          "yield":"appeal",
+          "value":2
+        }
+      ],
+      "bonus_yields":[
+        {
+          "category":"civics",
+          "id":"diplomatic_service",
+          "yield":"culture",
+          "value":1
+        }
+      ]
+    },
+    "roman_fort":{
+      "name":"Roman Fort",
+      "id":"roman_fort",
+      "unique":{
+        "category":"civilizations",
+        "id":"rome"
+      },
+      "base_yields":[{"yield":"defense","value":4}],
+      "build_by":"legion"
+    },
+    "sphinx":{
+      "name":"Sphinx",
+      "id":"sphinx",
+      "requires":"craftsmanship",
+      "unique":{
+        "category":"civilizations",
+        "id":"egypt"
+      },
+      "base_yields":
+      [
+        {
+          "yield":"faith",
+          "value":1
+        },
+        {
+          "yield":"faith",
+          "value":2,
+          "notes":"if next to a Wonder."
+        },
+        {
+          "yield":"culture",
+          "value":1
+        }
+      ],
+      "bonus_yields":[
+        {
+          "category":"civics",
+          "id":"natural_history",
+          "yield":"culture",
+          "value":1
+        }
+      ]
+    },
+    "stepwell":{
+      "name":"Stepwell",
+      "id":"stepwell",
+      "requires":"irrigation",
+      "unique":{
+        "category":"civilizations",
+        "id":"india"
+      },
+      "base_yields":
+      [
+        {
+          "yield":"food",
+          "value":1
+        },
+        {
+          "yield":"food",
+          "value":1,
+          "adj":{
+            "category":"improvements",
+            "id":"farm"
+          }
+        },
+        {
+          "yield":"housing",
+          "value":1
+        },
+        {
+          "yield":"faith",
+          "value":1,
+          "adj":{
+            "category":"districts",
+            "id":"holy_site"
+          }
+        }
+      ],
+      "bonus_yields":[
+        {
+          "category":"civics",
+          "id":"feudalism",
+          "yield":"faith",
+          "value":1
+        },
+        {
+          "category":"civics",
+          "id":"professional_sports",
+          "yield":"food",
+          "value":1
+        }
+      ]
+    },
+    "ziggurat":{
+      "name":"Ziggurat",
+      "id":"ziggurat",
+      "unique":{
+        "category":"civilizations",
+        "id":"sumeria"
+      },
+      "base_yields":
+      [
+        {
+          "yield":"science",
+          "value":2
+        },
+        {
+          "yield":"culture",
+          "value":1,
+          "notes":"if next to river."
+        }
+      ],
+      "bonus_yields":[
+        {
+          "category":"civics",
+          "id":"natural_history",
+          "yield":"culture",
+          "value":1
+        }
+      ]
+    }
+  }
+}
