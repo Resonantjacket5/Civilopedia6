@@ -114,8 +114,8 @@ export class GameDataProvider {
       const localFetch = this.http.get("../../assets/gameplay/"+fileName)
       .map((res:any) => res.json());
 
-      return localFetch;
-      /*
+      //return localFetch;
+
       // github pages fetch
       const githubPageFetch = this.http.get("../../Civilopedia6/assets/gameplay/"+fileName)
       .map((res:any) => res.json());
@@ -123,7 +123,7 @@ export class GameDataProvider {
 
       // pretty janky should remove for
       return Observable.merge(localFetch, githubPageFetch);
-      */
+      /**/
     }
     //.catch((err:any) => Observable.throw(err.json().error));
   }
